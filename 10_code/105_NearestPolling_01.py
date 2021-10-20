@@ -49,37 +49,37 @@ print(len(subset_college))
 # Find Nearest Traditional Polling Place for Subset of Colleges
 
 
-college.crs = 4326
-subset_college.crs = 4326
-polling_gdf.crs = 4326
+college = college.set_crs(epsg=4326)
+subset_college = subset_college.set_crs(epsg=4326)
+polling_gdf = polling_gdf.set_crs(epsg=4326)
 
+# Project into US Equidistant Conic
+# https://en.wikipedia.org/wiki/Equidistant_conic_projection
+# Still includes hawaii and Alaska, but not built for them so
+# probably shouldn't trust those states.
+# https://epsg.io/102005
 
-def nearest_poll_idx(row, polling_df):
-    polling_index = polling_df["geometry"].distance(row.geometry).sort_values().index[0]
-    return polling_index
+wkt = """PROJCS["USA_Contiguous_Equidistant_Conic",
+        GEOGCS["GCS_North_American_1983",
+            DATUM["North_American_Datum_1983",
+                SPHEROID["GRS_1980",6378137,298.257222101]],
+            PRIMEM["Greenwich",0],
+            UNIT["Degree",0.017453292519943295]],
+        PROJECTION["Equidistant_Conic"],
+        PARAMETER["False_Easting",0],
+        PARAMETER["False_Northing",0],
+        PARAMETER["Longitude_Of_Center",-96],
+        PARAMETER["Standard_Parallel_1",33],
+        PARAMETER["Standard_Parallel_2",45],
+        PARAMETER["Latitude_Of_Center",39],
+        UNIT["Meter",1],
+        AUTHORITY["EPSG","102005"]]"""
+college = college.to_crs(wkt)
+subset_college = subset_college.to_crs(wkt)
+polling_gdf = polling_gdf.to_crs(wkt)
 
-
-def nearest_poll_dist(row, polling_df):
-    polling_distance = (
-        polling_df["geometry"].distance(row.geometry).sort_values().values[0]
-    )
-    return polling_distance
-
-
-def nearest_poll_name(row, polling_df):
-    polling_place_name = polling_df.loc[row.nearest_polling_index][
-        "address.locationName"
-    ]
-    return polling_place_name
-
-
-def nearest_poll_geom(row, polling_df):
-    polling_place_geom = polling_df.loc[row.nearest_polling_index]["geometry"]
-    return polling_place_geom
-
-
-college_trad_poll = subset_college.copy()
-college_trad_poll.head()
+# Get distance to nearest
+college_trad_poll = college.sjoin_nearest(polling_gdf, distance_col="distances")
 
 college_trad_poll.to_csv(
     "../20_intermediate_files/subset_college_nearest_poll_2020.csv", index=False
