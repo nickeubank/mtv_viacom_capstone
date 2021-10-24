@@ -79,7 +79,7 @@ subset_college = subset_college.to_crs(wkt)
 polling_gdf = polling_gdf.to_crs(wkt)
 
 # Get distance to nearest
-college_trad_poll = college.sjoin_nearest(polling_gdf, distance_col="distances")
+college_trad_poll = subset_college.sjoin_nearest(polling_gdf, distance_col="distances")
 
 college_trad_poll.to_csv(
     "../20_intermediate_files/subset_college_nearest_poll_2020.csv", index=False
@@ -97,13 +97,15 @@ early_gdf = gpd.GeoDataFrame(
     early, geometry=gpd.points_from_xy(early.longitude, early.latitude)
 )
 
+early_gdf = early_gdf.set_crs(epsg=4326)
+early_gdf = early_gdf.to_crs(wkt)
 
 # Subset our college to only states with early voting data
 state_list = list(early_gdf["address.state"].unique())
 college_early = subset_college[subset_college["State_x"].isin(state_list)]
 
-
-college_early.head()
+# Get distance to nearest
+college_early = college_early.sjoin_nearest(early_gdf, distance_col="distances")
 
 college_early.to_csv(
     "../20_intermediate_files/subset_college_nearest_early_poll_2020.csv", index=False
