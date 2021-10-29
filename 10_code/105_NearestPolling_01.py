@@ -30,26 +30,21 @@ polling_gdf.head()
 # Load Final List of Colleges and Subset of Colleges
 
 
-college = gpd.read_file(
-    "../20_intermediate_files/final_college_polygons.csv",
-    GEOM_POSSIBLE_NAMES="geometry",
-    KEEP_GEOM_COLUMNS="NO",
-)
-print(len(college))
-
-
-subset_college = gpd.read_file(
-    "../20_intermediate_files/subset_final_college_polygon.csv",
-    GEOM_POSSIBLE_NAMES="geometry",
-    KEEP_GEOM_COLUMNS="NO",
-)
+subset_col = pd.read_csv("../00_source_data/College_Data/Merged_College_Polygon.csv")
+from shapely import wkt
+subset_col['geometry'] = subset_col['geometry'].apply(wkt.loads)
+subset_college = gpd.GeoDataFrame(subset_col, crs = 'epsg:4326')
+#subset_college = gpd.read_file(
+#    "../00_source_data/College_Data/Merged_College_Polygon.csv",
+#    GEOM_POSSIBLE_NAMES="geometry",
+#    KEEP_GEOM_COLUMNS="NO",
+#)
 print(len(subset_college))
 
 
 # Find Nearest Traditional Polling Place for Subset of Colleges
 
 
-college = college.set_crs(epsg=4326)
 subset_college = subset_college.set_crs(epsg=4326)
 polling_gdf = polling_gdf.set_crs(epsg=4326)
 
@@ -74,7 +69,7 @@ wkt = """PROJCS["USA_Contiguous_Equidistant_Conic",
         PARAMETER["Latitude_Of_Center",39],
         UNIT["Meter",1],
         AUTHORITY["EPSG","102005"]]"""
-college = college.to_crs(wkt)
+
 subset_college = subset_college.to_crs(wkt)
 polling_gdf = polling_gdf.to_crs(wkt)
 
@@ -102,7 +97,7 @@ early_gdf = early_gdf.to_crs(wkt)
 
 # Subset our college to only states with early voting data
 state_list = list(early_gdf["address.state"].unique())
-college_early = subset_college[subset_college["State_x"].isin(state_list)]
+college_early = subset_college[subset_college["State"].isin(state_list)]
 
 # Get distance to nearest
 college_early = college_early.sjoin_nearest(early_gdf, distance_col="distances")
