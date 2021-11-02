@@ -4,6 +4,9 @@ import pprint as pp
 import numpy as np
 import pandas as pd
 import re
+import sys
+
+
 def extract_distance(response):
     #Calculate the distance
     #km_m converter is used to convert km to miles
@@ -78,8 +81,11 @@ def main_distance(org_y,org_x,dest_y,dest_x,data,i):
 
 def load_data():
     #input the data
-    data=pd.read_csv("../20_intermediate_files/subset_college_nearest_poll_2016.csv")
-    print(data.columns)
+    input_filename = sys.argv[1]
+    print(input_filename)
+    data=pd.read_csv("../20_intermediate_files/"+input_filename+".csv")
+    print(data.head(2))
+    exit()
     data = data[data['Longitude_left'].notna()]
     data=data.drop_duplicates(subset=['School Name'])
     for i,r in data.iterrows():
@@ -90,7 +96,8 @@ def load_data():
         x_col,y_col=data.loc[i,'Longitude_left'],data.loc[i,'Latitude_left']
 
         main_distance(str(y_col),str(x_col),str(y_pol),str(x_pol),data,i)
-    _=data.to_csv("../20_intermediate_files/subset_college_nearest_poll_2016_distanceAPI.csv")
+    output_filename = input_filename+"_distanceAPI"
+    _=data.to_csv("../20_intermediate_files/"+output_filename+".csv")
 
 load_data()
 #main_distance(str(61.19213),str(-149.815706),str(41.313971), str(-105.571927))
