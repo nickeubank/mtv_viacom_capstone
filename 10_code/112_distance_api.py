@@ -78,16 +78,19 @@ def main_distance(org_y,org_x,dest_y,dest_x,data,i):
 
 def load_data():
     #input the data
-    data=pd.read_csv("../20_intermediate_files/subset_college_nearest_early_poll_2020.csv")
-    print(data)
+    data=pd.read_csv("../20_intermediate_files/subset_college_nearest_poll_2016.csv")
+    print(data.columns)
+    data = data[data['Longitude_left'].notna()]
+    data=data.drop_duplicates(subset=['School Name'])
     for i,r in data.iterrows():
         #extracting the polling location and passing the lat long for college and polling into main_distance
-        polling_location=list(data.loc[i,'nearest_polling_geometry'][7:-1].split())
-        x_pol,y_pol=polling_location[0],polling_location[1]
-        x_col,y_col=data.loc[i,'x_centroid'],data.loc[i,'y_centroid']
+        #polling_location=list(data.loc[i,'nearest_polling_geometry'][7:-1].split())
 
-        main_distance(str(y_col),str(x_col),y_pol,x_pol,data,i)
-    _=data.to_csv("../20_intermediate_files/subset_college_nearest_earlypoll2020_distance_API.csv")
+        x_pol,y_pol=data.loc[i,'Longitude_right'],data.loc[i,'Latitude_right']
+        x_col,y_col=data.loc[i,'Longitude_left'],data.loc[i,'Latitude_left']
+
+        main_distance(str(y_col),str(x_col),str(y_pol),str(x_pol),data,i)
+    _=data.to_csv("../20_intermediate_files/subset_college_nearest_poll_2016_distanceAPI.csv")
 
 load_data()
 #main_distance(str(61.19213),str(-149.815706),str(41.313971), str(-105.571927))
