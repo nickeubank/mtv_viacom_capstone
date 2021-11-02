@@ -13,12 +13,15 @@ Our short term task management is shown via the Github Issues tab of this reposi
    Input: 00_source_data/CollegeUniversityCampuses/CollegeUniversityCampuses.shp <br>
    Output: 00_source_data/College_Data/Raw_College_Polygon.csv and 00_source_data/College_Data/Raw_College_Polygon.geojson <br>
 <br>
+
 2. File Name: 111_merging_arcgis_master.py <br>
    Description: Performs text preprocessing for the +1 Master College Table and inner joins with the raw college polygon file. <br>
-   Input: /00_source_data/College_Data/Raw_College_Polygon.geojson and /00_source_data/College_Data/SLSV Master Campus Sheet - Master Sheet.csv (+1 Master College Data) <br>
+   Input: /00_source_data/College_Data/Raw_College_Polygon.geojson and /00_source_data/College_Data/SLSV Master Campus Sheet - Master         Sheet.csv (+1 Master College Data) <br>
    Output: /00_source_data/College_Data/Merged_College_Polygon.csv <br>
 <br>
+
 3. File Name: 112_distance_api.py <br>
    Description: Calculates the Driving, Walking, Transit time and duration from the college and its nearest polling location through the Google Maps API <br>
    Input: /20_intermediate_files/subset_college_nearest_poll_2016.csv <br>
    Output: /20_intermediate_files/subset_college_nearest_poll_2016_distanceAPI.csv <br>
+<br>
