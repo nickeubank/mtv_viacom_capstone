@@ -22,6 +22,7 @@ Our short term task management is shown via the Github Issues tab of this reposi
 
 3. File Name: 112_distance_api.py <br>
    Description: Calculates the Driving, Walking, Transit time and duration from the college and its nearest polling location through the Google Maps API <br>
-   Input: /20_intermediate_files/subset_college_nearest_poll_2016.csv <br>
+   Input: Have to add in the command line (argument) the nearest college polling data from /20_intermediate_files/. For example: 
+   ```python 112_distance_api.py subset_college_nearest_poll_2016``` <br>
    Output: /20_intermediate_files/subset_college_nearest_poll_2016_distanceAPI.csv <br>
 <br>
