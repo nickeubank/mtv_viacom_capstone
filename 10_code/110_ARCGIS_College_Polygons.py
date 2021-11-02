@@ -21,8 +21,9 @@ def string_punc(test_str):
             if word not in ['the','at','in','and','of']:
                 processed_lst.append(word)
 
+
         test_str=' '.join(processed_lst)
-        print(test_str)
+        test_str = test_str.replace(" ", "")
         return test_str.lower()
     except:
         return 'Null'
@@ -59,4 +60,3 @@ if __name__ == "__main__":
 
     _=geo_df.to_file("../00_source_data/College_Data/Raw_College_Polygon.geojson", driver='GeoJSON')
     _=geo_df.to_csv("../00_source_data/College_Data/Raw_College_Polygon.csv")
-
