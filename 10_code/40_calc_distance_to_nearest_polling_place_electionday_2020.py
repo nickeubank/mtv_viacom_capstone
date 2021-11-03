@@ -1,10 +1,6 @@
 import pandas as pd
 import geopandas as gpd
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import figure
-import geopy.distance
-from shapely.ops import nearest_points
 
 # Load Polling Place Data (2020)
 
@@ -28,18 +24,10 @@ polling_gdf.head()
 
 
 # Load Final List of Colleges and Subset of Colleges
-
-
-subset_col = pd.read_csv("../00_source_data/College_Data/Merged_College_Polygon.csv")
-from shapely import wkt
-subset_col['geometry'] = subset_col['geometry'].apply(wkt.loads)
-subset_college = gpd.GeoDataFrame(subset_col, crs = 'epsg:4326')
-#subset_college = gpd.read_file(
-#    "../00_source_data/College_Data/Merged_College_Polygon.csv",
-#    GEOM_POSSIBLE_NAMES="geometry",
-#    KEEP_GEOM_COLUMNS="NO",
-#)
-print(len(subset_college))
+subset_col = gpd.read_file(
+    "../20_intermediate_files/20_campus_polygons_w_demographics.geojson",
+    driver="GEOJSON",
+)
 
 
 # Find Nearest Traditional Polling Place for Subset of Colleges
