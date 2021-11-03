@@ -25,15 +25,11 @@ polling_gdf.head()
 
 # Load Final List of Colleges and Subset of Colleges
 subset_col = gpd.read_file(
-    "../20_intermediate_files/20_campus_polygons_w_demographics.geojson",
-    driver="GEOJSON",
+    "../20_intermediate_files/20_campus_polygons_w_demographics.geojson"
 )
 
 
 # Find Nearest Traditional Polling Place for Subset of Colleges
-
-
-subset_college = subset_college.set_crs(epsg=4326)
 polling_gdf = polling_gdf.set_crs(epsg=4326)
 
 # Project into US Equidistant Conic
