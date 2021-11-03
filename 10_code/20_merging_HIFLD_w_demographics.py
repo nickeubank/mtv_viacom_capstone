@@ -88,4 +88,6 @@ not_merged = pd.DataFrame(not_merged)
 not_merged.to_csv("../20_intermediate_files/15_polygons_not_merged_w_demographics.csv")
 
 print("Length of Merged Table without duplicates:", len(final_data))
-final_data.to_csv("../20_intermediate_files/20_campus_polygons_w_demographics.geojson")
+
+final_data = final_data.drop("_merge", axis="columns")
+final_data.to_file("../20_intermediate_files/20_campus_polygons_w_demographics.geojson")
