@@ -51,65 +51,6 @@ cpi_adjusted = cpi[['state','name','address','geog','latitude','longitude']]
 cpi_adjusted = cpi_adjusted.drop_duplicates()
 cpi_adjusted = cpi_adjusted.dropna(subset=['latitude', 'longitude'])
 
-#Merge on Latitude/Longitude
-new_df = pd.merge(sg_adjusted, cpi_adjusted, how="inner",on=["latitude","longitude"])
-print(len(new_df))
-new_df.head()
-
-###
-#Try rounding Latitude/Longitude to x decimal places
-###
-
-def inner_match(n,sg_adjusted,cpi_adjusted):
-    temp_sg = sg_adjusted.copy()
-    temp_cpi = cpi_adjusted.copy()
-    temp_sg['latitude'] = round(temp_sg['latitude'],n)
-    temp_sg['longitude'] = round(temp_sg['longitude'],n)
-    temp_cpi['latitude'] = round(temp_cpi['latitude'],n)
-    temp_cpi['longitude'] = round(temp_cpi['longitude'],n)
-    temp_cpi = temp_cpi.reset_index()
-    new_df = pd.merge(temp_sg, temp_cpi, how="inner",on=["latitude","longitude"])
-    return new_df
-def track_merge():
-    unique_matches = []
-    cpi_overlap = []
-    sg_overlap = []
-    for i in range(2,30):
-        rounddf = inner_match(i,sg_adjusted,cpi_adjusted)
-        uniq_q = rounddf.drop_duplicates(subset="query_id")
-        uniq_i = rounddf.drop_duplicates(subset="index")
-        #Overlap is the number of excess unique values that appear
-        cpi_overlap.append(len(uniq_q['query_id'].unique()) - len(uniq_q['index'].unique()))
-        sg_overlap.append(len(uniq_i['index'].unique()) - len(uniq_i['query_id'].unique()))
-        unique_matches.append(min(len(uniq_i['query_id'].unique()),len(uniq_i['index'].unique())))
-    return pd.DataFrame({"Unique Matches":unique_matches, "CPI Overlap":cpi_overlap, "SG Overlap":sg_overlap})
-
-final_df = track_merge()
-
-f1 = plt.figure()
-f2 = plt.figure()
-f3 = plt.figure()
-ax1 = f1.add_subplot(111)
-ax2 = f2.add_subplot(111)
-ax3 = f3.add_subplot(111)
-
-#Plot Num of Matches
-ax1.plot(final_df.index,final_df['Unique Matches'],linestyle='-', marker='o')
-ax1.set_xlabel('Number of Decimals')
-ax1.set_ylabel('Matches')
-ax1.set_title('Matches by Decimal Rounding')
-
-#Plot CPI Overlap
-ax2.plot(final_df.index,final_df['CPI Overlap'],linestyle='-', marker='o')
-ax2.set_xlabel('Number of Decimals')
-ax2.set_ylabel('CPI Overlap')
-ax2.set_title('CPI Overlap by Decimal Rounding')
-
-#Plot SG Overlap
-ax3.plot(final_df.index,final_df['SG Overlap'],linestyle='-', marker='o')
-ax3.set_xlabel('Number of Decimals')
-ax3.set_ylabel('SG Overlap')
-ax3.set_title('SG Overlap by Decimal Rounding')
 
 ###
 #Let's Try Buffering
@@ -139,53 +80,12 @@ sg_geo = geopandas.GeoDataFrame(sg_adjusted, geometry='geometry')
 sg_geo = sg_geo.set_crs(epsg=4326)
 sg_geo = sg_geo.to_crs(wkt)
 
-def track_buffer():
-    unique_matches = []
-    cpi_overlap = []
-    sg_overlap = []
-    buffer_vals = []
-    div = 10000000000.0
-    for i in range(1,200):
-        cpi_geo_temp = cpi_geo.copy()
-        #Add buffer
-        cpi_geo_temp.geometry = cpi_geo_temp.geometry.buffer(i/div)
-        #Join
-        geo_join = cpi_geo_temp.sjoin(sg_geo, how="inner", predicate='contains')
-        #Check for overlap
-        uniq_q = geo_join.drop_duplicates(subset="query_id")
-        uniq_i = geo_join.drop_duplicates(subset="index")
-        cpi_overlap.append(len(uniq_q['query_id'].unique()) - len(uniq_q['index'].unique()))
-        sg_overlap.append(len(uniq_i['index'].unique()) - len(uniq_i['query_id'].unique()))
-        unique_matches.append(min(len(uniq_i['query_id'].unique()),len(uniq_i['index'].unique())))
-        buffer_vals.append(i/div)
-    return pd.DataFrame({"Unique Matches":unique_matches, "CPI Overlap":cpi_overlap, "SG Overlap":sg_overlap, "Buffer Value":buffer_vals})
+#Buffer and Then Merge
+buffer = 200
+cpi_geo.geometry = cpi_geo.geometry.buffer(buffer)
+geo_join = cpi_geo.sjoin(sg_geo, how="left", predicate='contains')
 
-#Can take a few minutes to run
-geo_df = track_buffer()
+#Make file smaller
+geo_join = geo_join[['state','name','address','latitude_left','longitude_left','geometry','pollingHours']]
 
-f4 = plt.figure()
-f5 = plt.figure()
-f6 = plt.figure()
-ax4 = f4.add_subplot(111)
-ax5 = f5.add_subplot(111)
-ax6 = f6.add_subplot(111)
-
-#Plot Matches
-ax4.plot(geo_df['Buffer Value'],geo_df['Unique Matches'],linestyle='-', marker='o')
-ax4.set_xlabel('Buffer Value')
-ax4.set_ylabel('Number of Matches')
-ax4.set_title('Number of Matches by Buffer Value')
-
-#Plot CPI Overlap
-ax5.plot(geo_df['Buffer Value'],geo_df['CPI Overlap'],linestyle='-', marker='o')
-ax5.set_xlabel('Buffer Value')
-ax5.set_ylabel('CPI Overlap')
-ax5.set_title('CPI Overlap by Buffer Value')
-
-#Plot SG Overlap
-ax6.plot(geo_df['Buffer Value'],geo_df['SG Overlap'],linestyle='-', marker='o')
-ax6.set_xlabel('Buffer Value')
-ax6.set_ylabel('SG Overlap')
-ax6.set_title('SG Overlap by Buffer Value')
-
-plt.show()
+geo_join.to_csv("../20_intermediate_files/final_2020_polling.csv", index=False)
