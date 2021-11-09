@@ -31,6 +31,28 @@ def string_punc(test_str):
 # Import pre-cleaned HIFLD polygons
 ############
 
+def string_punc(test_str):
+
+    punc = """!()-[]{};:'"\,<>./?@#$%^&*_~"""
+
+    try:
+
+        test_str = str(test_str).lower()
+        # print(test_str)
+        for ele in test_str:
+            if ele in punc:
+                test_str = test_str.replace(ele, "")
+        processed_lst = []
+        for word in test_str.split():
+            if word not in ["the", "at", "in", "and", "of"]:
+                processed_lst.append(word)
+
+        test_str = " ".join(processed_lst)
+        test_str = test_str.replace(" ", "")
+        return test_str.lower()
+    except:
+        return "Null"
+
 geo_df = gpd.read_file("../20_intermediate_files/10_HIFLD_campus_polygons.geojson")
 master_df = pd.read_csv(
     "../00_source_data/College_Data/SLSV Master Campus Sheet - Master Sheet.csv",
@@ -40,7 +62,7 @@ print("Original Master:", len(master_df))
 
 master_df["preprocessed_name"] = master_df["School Name"].apply(string_punc)
 geo_df["preprocessed_name"] = geo_df["preprocessed_name"].apply(string_punc)
-
+master_df=master_df.drop_duplicates()
 master_df = master_df[
     ~master_df["preprocessed_name"].str.contains(
         "policy|law|phd|graduate|grad|health|medicine|medical"
@@ -48,6 +70,20 @@ master_df = master_df[
         regex=True,
     )
 ]
+master_df=master_df[master_df['IPED ID']!='Hawaii Community College']
+master_df=master_df[master_df['IPED ID']!='485263.00']
+master_df=master_df[master_df['IPED ID']!='101949.00']
+master_df = master_df[master_df['IPED ID'] != '155636.00']
+
+#geo_df = geo_df[geo_df['preprocessed_name']!='stevenshenagercollege']
+#geo_df = geo_df[geo_df['preprocessed_name']!='laureltechnicalinstitute']
+#geo_df = geo_df[(geo_df['preprocessed_name']!='westerntechnicalcollege') &(geo_df['STATE']!='TX')]
+geo_df = geo_df.loc[~geo_df.duplicated(['preprocessed_name', "STATE"])]
+
+geo_df=geo_df[geo_df['UNIQUEID']!='459082']
+geo_df=geo_df[geo_df['UNIQUEID']!='241128']
+
+print("Updated Master:", len(master_df))
 
 #
 #
@@ -61,9 +97,11 @@ master_df = master_df[
 print("Length of Master Table:", len(master_df))
 merged_data = geo_df.merge(
     master_df,
-    on="preprocessed_name",
-    how="outer",
+    left_on = ['preprocessed_name', 'STATE'],
+    right_on = ['preprocessed_name', 'State'],
+    how="inner",
     indicator=True,
+    validate='1:1'
 )
 
 # Drop do inner -- do outer, check

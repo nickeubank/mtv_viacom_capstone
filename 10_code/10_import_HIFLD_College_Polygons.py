@@ -30,7 +30,7 @@ def string_punc(test_str):
 ############
 
 geo_df = gpd.read_file(
-    "../00_source_data/CollegeUniversityCampuses/CollegeUniversityCampuses.shp"
+    "/Users/pranavmanjunath/Desktop/Duke/Capstone Project/mtv_viacom_capstone/00_source_data/HIFLD_CollegeUniversityCampuses/HIFLD_CollegeUniversityCampuses.shp"
 )
 
 # preprocessing the college names
