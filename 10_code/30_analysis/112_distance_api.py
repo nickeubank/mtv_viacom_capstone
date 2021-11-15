@@ -81,11 +81,10 @@ def main_distance(org_y,org_x,dest_y,dest_x,data,i):
 
 def load_data():
     #input the data
-    input_filename = sys.argv[1]
+    input_filename = "30_campuses_w_dist_to_nearest_pp"
     print(input_filename)
     data=pd.read_csv("../20_intermediate_files/"+input_filename+".csv")
-    print(data.head(2))
-    exit()
+
     data = data[data['Longitude_left'].notna()]
     data=data.drop_duplicates(subset=['School Name'])
     for i,r in data.iterrows():
