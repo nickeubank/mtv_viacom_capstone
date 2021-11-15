@@ -34,7 +34,7 @@ def string_punc(test_str):
 #import the geo_df and master_df
 geo_df = gpd.read_file("../20_intermediate_files/10_HIFLD_campus_polygons.geojson")
 master_df = pd.read_csv(
-    "../00_source_data/College_Data/SLSV Master Campus Sheet - Master Sheet.csv",
+    "./Users/pranavmanjunath/Desktop/Duke/Capstone Project/mtv_viacom_capstone/00_source_data/PlusOne_College_Demographic_Data/SLSV Master Campus Sheet - Master Sheet.csv",
     header=1,
 )
 print("Original Master:", len(master_df))
