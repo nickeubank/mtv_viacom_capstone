@@ -4,6 +4,11 @@ import pandas as pd
 # Little helper function for later
 
 
+
+############
+# Import pre-cleaned HIFLD polygons
+############
+
 def string_punc(test_str):
 
     punc = """!()-[]{};:'"\,<>./?@#$%^&*_~"""
@@ -26,22 +31,18 @@ def string_punc(test_str):
     except:
         return "Null"
 
-
-############
-# Import pre-cleaned HIFLD polygons
-############
-
-geo_df = gpd.read_file("../../20_intermediate_files/10_HIFLD_campus_polygons.geojson")
+#import the geo_df and master_df
+geo_df = gpd.read_file("../20_intermediate_files/10_HIFLD_campus_polygons.geojson")
 master_df = pd.read_csv(
-    "../../00_source_data/PlusOne_College_Demographic_Data"
-    "/SLSV Master Campus Sheet - Master Sheet.csv",
+    "../00_source_data/College_Data/SLSV Master Campus Sheet - Master Sheet.csv",
     header=1,
 )
 print("Original Master:", len(master_df))
 
+#applying the string punctuations
 master_df["preprocessed_name"] = master_df["School Name"].apply(string_punc)
 geo_df["preprocessed_name"] = geo_df["preprocessed_name"].apply(string_punc)
-
+master_df=master_df.drop_duplicates()
 master_df = master_df[
     ~master_df["preprocessed_name"].str.contains(
         "policy|law|phd|graduate|grad|health|medicine|medical"
@@ -50,21 +51,28 @@ master_df = master_df[
     )
 ]
 
-#
-#
-# THIS IS A MANY-TO-MANY MERGE! THOSE ARE TROUBLE!
-# Use the `validate` keyword to check your merge assumptions
-#
-# Also if you use the geopandas dataframe up front,
-# geospatial data is preserved.
-#
+#Helping to remove the Many to Many Match
+master_df=master_df[master_df['IPED ID']!='Hawaii Community College']
+master_df=master_df[master_df['IPED ID']!='485263.00']
+master_df=master_df[master_df['IPED ID']!='101949.00']
+master_df = master_df[master_df['IPED ID'] != '155636.00']
+
+geo_df = geo_df.loc[~geo_df.duplicated(['preprocessed_name', "STATE"])]
+
+geo_df=geo_df[geo_df['UNIQUEID']!='459082']
+geo_df=geo_df[geo_df['UNIQUEID']!='241128']
+
+print("Updated Master:", len(master_df))
+
 
 print("Length of Master Table:", len(master_df))
 merged_data = geo_df.merge(
     master_df,
-    on="preprocessed_name",
-    how="outer",
+    left_on = ['preprocessed_name', 'STATE'],
+    right_on = ['preprocessed_name', 'State'],
+    how="inner",
     indicator=True,
+    validate='1:1'
 )
 
 # Drop do inner -- do outer, check
@@ -78,15 +86,6 @@ print("Length of Merged Table:", len(final_data))
 
 final_data = final_data.drop_duplicates(subset="NAME", keep="first")
 
-# merged_data.sort_values(["preprocessed_name", "State", "STATE"])[
-#     merged_data._merge == "left_only"
-# ].to_csv("/users/nick/desktop/left.csv")
-
-# merged_data.sort_values(["preprocessed_name", "State", "STATE"])[
-#     merged_data._merge == "right_only"
-# ].to_csv("/users/nick/desktop/right.csv")
-
-
 # This you now get as a full dataset (without this run time)
 # from your `merged_data._merge == "left"` or `merged_data._merge == "right"`
 # results
@@ -95,14 +94,11 @@ final_data = final_data.drop_duplicates(subset="NAME", keep="first")
 
 not_merged = merged_data[merged_data._merge != "both"]
 not_merged = pd.DataFrame(not_merged)
-not_merged.to_csv(
-    "../../20_intermediate_files/15_polygons_not_merged_w_demographics.csv"
-)
+not_merged.to_csv("../20_intermediate_files/15_polygons_not_merged_w_demographics.csv")
 
 print("Length of Merged Table without duplicates:", len(final_data))
 
 final_data = final_data.drop("_merge", axis="columns")
-final_data.to_file(
-    "../../20_intermediate_files/20_campus_polygons_w_demographics.geojson",
-    driver="GeoJSON",
-)
+final_data.to_file("../20_intermediate_files/20_campus_polygons_w_demographics.geojson")
+
+
