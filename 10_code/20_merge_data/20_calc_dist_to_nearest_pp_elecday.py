@@ -26,7 +26,7 @@ campuses = gpd.read_file(
 
 campuses = campuses.set_crs(wkt, allow_override=True)
 
-campuses = campuses[["NAME", "STATE", "CITY", "geometry"]].copy()
+campuses = campuses.copy()
 year = 2018
 
 # Load all polling data, get nearest
@@ -69,7 +69,25 @@ for year in [2012, 2016, 2018, 2020]:
     ] = np.nan
 
 
-campuses.columns
+#Add Ballot Ready Polling Data
+p = gpd.read_file(
+        f"../../20_intermediate_files/10_polling_places/2020_BallotReady_Early.geojson"
+    )
+p = p.set_crs(wkt, allow_override=True)
+p = p[["state", "geometry"]]
+year = '2020_early'
+p = p.rename({"state": f"state_{year}"}, axis="columns")
+campuses = campuses.sjoin_nearest(p, distance_col=f"distances_{year}", how="left")
+campuses = campuses.drop("index_right", axis="columns")
+campuses = campuses.drop_duplicates()
+
+# Drop if nearest out-of-state
+campuses.loc[
+    (campuses["STATE"] != campuses[f"state_{year}"])
+    & campuses[f"distances_{year}"].notnull(),
+    f"distances_{year}",
+    ] = np.nan
+
 
 campuses.to_file(
     "../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson",
