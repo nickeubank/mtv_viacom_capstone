@@ -61,8 +61,8 @@ states = {
     'WI': 'M',
     'WV': 'S',
     'WY': 'W',
-    'FM': 'NA',
-    'PW': 'NA'
+    'FM': 'O',
+    'PW': 'O'
 }
 
 regions={
@@ -70,8 +70,7 @@ regions={
     'W':'West',
     'M': 'Mid West',
     'S': 'South',
-    'O': 'Other',
-    'NA': 'Not Applicable'
+    'O': 'Other'
 }
 
 
