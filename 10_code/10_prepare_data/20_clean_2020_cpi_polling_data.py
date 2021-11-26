@@ -50,27 +50,12 @@ cpi_adjusted = cpi_adjusted.dropna(subset=["latitude", "longitude"])
 # Project and save.
 ###
 
-wkt = """PROJCS["USA_Contiguous_Equidistant_Conic",
-        GEOGCS["GCS_North_American_1983",
-            DATUM["North_American_Datum_1983",
-                SPHEROID["GRS_1980",6378137,298.257222101]],
-            PRIMEM["Greenwich",0],
-            UNIT["Degree",0.017453292519943295]],
-        PROJECTION["Equidistant_Conic"],
-        PARAMETER["False_Easting",0],
-        PARAMETER["False_Northing",0],
-        PARAMETER["Longitude_Of_Center",-96],
-        PARAMETER["Standard_Parallel_1",33],
-        PARAMETER["Standard_Parallel_2",45],
-        PARAMETER["Latitude_Of_Center",39],
-        UNIT["Meter",1],
-        AUTHORITY["EPSG","102005"]]"""
 cpi_geo = geopandas.GeoDataFrame(
     cpi_adjusted,
     geometry=geopandas.points_from_xy(cpi_adjusted.longitude, cpi_adjusted.latitude),
 )
 cpi_geo = cpi_geo.set_crs(epsg=4326)
-cpi_geo = cpi_geo.to_crs(wkt)
+#cpi_geo = cpi_geo.to_crs(wkt)
 cpi_geo = cpi_geo.reset_index()
 
 cpi_geo.to_file(
