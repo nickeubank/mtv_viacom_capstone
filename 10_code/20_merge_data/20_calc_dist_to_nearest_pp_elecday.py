@@ -24,7 +24,7 @@ campuses = gpd.read_file(
     "../../20_intermediate_files/20_campus_polygons_w_demographics.geojson"
 )
 
-campuses = campuses.set_crs(wkt,allow_override=True)
+campuses = campuses.to_crs(wkt)
 
 campuses = campuses.copy()
 year = 2018
