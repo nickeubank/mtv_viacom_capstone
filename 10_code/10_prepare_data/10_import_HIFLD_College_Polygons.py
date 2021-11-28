@@ -69,7 +69,7 @@ wkt = """PROJCS["USA_Contiguous_Equidistant_Conic",
         AUTHORITY["EPSG","102005"]]"""
 
 
-#geo_df = geo_df.to_crs(wkt)
+geo_df = geo_df.to_crs(wkt)
 
 # Extracting the centroid from each college polygon
 geo_df["centroid"] = geo_df.centroid
