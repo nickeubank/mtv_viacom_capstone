@@ -24,7 +24,7 @@ campuses = gpd.read_file(
     "../../20_intermediate_files/20_campus_polygons_w_demographics.geojson"
 )
 
-campuses = campuses.set_crs(wkt, allow_override=True)
+campuses = campuses.to_crs(wkt)
 
 campuses = campuses.copy()
 year = 2018
@@ -36,13 +36,16 @@ for year in [2012, 2016, 2018, 2020]:
     p = gpd.read_file(
         f"../../20_intermediate_files/10_polling_places/{year}_elecday_cpi.geojson"
     )
-    p = p.set_crs(wkt, allow_override=True)
+    p = p.to_crs(wkt)
 
     # Make sure in same projection
     assert campuses.crs == p.crs
-
-    p = p[["state", "geometry"]]
+    if 'latitude' in p.columns:
+        p = p.rename(columns={"latitude": "Latitude", "longitude": "Longitude"})
+    p = p[["state", "Latitude","Longitude","geometry"]]
     p = p.rename({"state": f"state_{year}"}, axis="columns")
+    p = p.rename({"Latitude": f"Latitude_{year}"}, axis="columns")
+    p = p.rename({"Longitude": f"Longitude_{year}"}, axis="columns")
 
     # Get distance to nearest
     # TO DO: Make within-state!
@@ -73,10 +76,15 @@ for year in [2012, 2016, 2018, 2020]:
 p = gpd.read_file(
         f"../../20_intermediate_files/10_polling_places/2020_BallotReady_Early.geojson"
     )
-p = p.set_crs(wkt, allow_override=True)
-p = p[["state", "geometry"]]
+p['Longitude'] = p['geometry'].x
+p['Latitude'] = p['geometry'].y
+p = p.to_crs(wkt)
+#Save a copy of polling place geometries
+p = p[["state", "Latitude", "Longitude", "geometry"]]
 year = '2020_early'
 p = p.rename({"state": f"state_{year}"}, axis="columns")
+p = p.rename({"Latitude": f"Latitude_{year}"}, axis="columns")
+p = p.rename({"Longitude": f"Longitude_{year}"}, axis="columns")
 campuses = campuses.sjoin_nearest(p, distance_col=f"distances_{year}", how="left")
 campuses = campuses.drop("index_right", axis="columns")
 campuses = campuses.drop_duplicates()
@@ -88,6 +96,16 @@ campuses.loc[
     f"distances_{year}",
     ] = np.nan
 
+#Drop excess columns
+campuses = campuses.drop(columns=['SLSV Coalition', 'ALL IN', 'AGF', 'Ask Every Student', 'Campus Vote Project','Voter Friendly Campus', 'StudentPIRGs', 'Aliento Education Fund', 'Alliance for Youth Organizing', 'American Democracy Project', 
+                   " Arizona Students' Association", 'Baltimore Collegetown Network\t\t', 'Black Girls Vote', 
+                   'Boston Votes Coalition', 'California Campus Compact ', 'CALPIRG Students', 'CEEP', 'Civic Nebraska', 
+                   'Common Cause', 'Count US IN', 'Creative Campus Voting Project', 'Day on Democracy', 'Democracy Works', 
+                   'Engage Miami', 'Every Vote Counts', 'Forward Montana', 'Georgia Shift', 'Hillel International', 
+                   'IGNITE National', 'IA & MN Campus Compact', 'LeadMN', 'Loud Light', 'Maine Students Vote', 'MARYPIRG', 
+                   'MI Familia Vota', 'Minnesota Youth Collective', 'Mississippi Votes', 'NASPAA', 'New Era Colorado', 
+                   'NYPIRG', 'NCAAT', 'NCPIRG', 'NC Campus Compact', 'Ohio Campus Compact', 'PIRGIM Campus Action', 
+                   'Project Pericles', 'TurnUp Activism', 'Up to Us/ Net Impact', 'VoteRiders', 'Washington Student Association', 'Xceleader (Vote HBCU)', 'NVEW 2020', 'NVRD\n2017', 'NVRD 2018', 'NVRD 2020'])
 
 campuses.to_file(
     "../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson",
