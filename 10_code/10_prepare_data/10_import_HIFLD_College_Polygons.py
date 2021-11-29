@@ -95,10 +95,11 @@ geo_df["centroid_long"] = geo_df["centroid"].x
 geo_df["centroid_lat"] = geo_df["centroid"].y
 
 # Back to projected
-geo_df = geo_df.to_crs(wkt)
+#geo_df = geo_df.to_crs(wkt)
 
 # Back to focus on campus polygons
 geo_df = geo_df.set_geometry("geometry")
+geo_df = geo_df.to_crs(epsg=4326)
 
 
 # Cause geo_df should have only 'geometry' and no other column that represents points
