@@ -125,7 +125,7 @@ for i in ["left_only", "right_only"]:
 
     subset[
         ["STATE", "State", "preprocessed_name"] + front + subset.columns.tolist()
-    ].to_csv(f"/users/nick/desktop/{i}.csv")
+    ].to_csv(f"../../20_intermediate_files/00_merge_tweaks/{i}.csv")
 
 
 print("Length of Merged Table without duplicates:", len(final_data))
