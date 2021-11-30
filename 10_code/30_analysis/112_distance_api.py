@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 import re
 import sys
+import geopandas as gpd
 
 
 def extract_distance(response):
@@ -70,8 +71,8 @@ def main_distance(org_y,org_x,dest_y,dest_x,data,i):
             #    col3='fare_in_dollars'
             #    data.loc[i,col3]=fare
 
-            col1='distance_by_'+mode+' (miles)'
-            col2='duration_by_'+mode+' (minutes)'
+            col1='2020_distance_by_'+mode+' (miles)'
+            col2='2020_duration_by_'+mode+' (minutes)'
             #print("Distance: ",distance)
             #print("Duration: ", duration)
             data.loc[i,col1]=distance
@@ -83,20 +84,23 @@ def load_data():
     #input the data
     input_filename = "30_campuses_w_dist_to_nearest_pp"
     print(input_filename)
-    data=pd.read_csv("../20_intermediate_files/"+input_filename+".csv")
+    data=gpd.read_file("../../20_intermediate_files/"+input_filename+".geojson")
 
-    data = data[data['Longitude_left'].notna()]
+    #data = data[data['Longitude_left'].notna()]
     data=data.drop_duplicates(subset=['School Name'])
     for i,r in data.iterrows():
         #extracting the polling location and passing the lat long for college and polling into main_distance
         #polling_location=list(data.loc[i,'nearest_polling_geometry'][7:-1].split())
-
-        x_pol,y_pol=data.loc[i,'Longitude_right'],data.loc[i,'Latitude_right']
-        x_col,y_col=data.loc[i,'Longitude_left'],data.loc[i,'Latitude_left']
+    
+        x_pol,y_pol=data.loc[i,'Longitude_2020'],data.loc[i,'Latitude_2020']
+        x_col,y_col=data.loc[i,'centroid_long'],data.loc[i,'centroid_lat']
 
         main_distance(str(y_col),str(x_col),str(y_pol),str(x_pol),data,i)
-    output_filename = input_filename+"_distanceAPI"
-    _=data.to_csv("../20_intermediate_files/"+output_filename+".csv")
+
+    _=data.to_file("../../20_intermediate_files/"+input_filename+".geojson", driver="GeoJSON")
+    
+    #geo_df.to_file(
+    #"../../20_intermediate_files/10_HIFLD_campus_polygons.geojson", driver="GeoJSON")
 
 load_data()
 #main_distance(str(61.19213),str(-149.815706),str(41.313971), str(-105.571927))
