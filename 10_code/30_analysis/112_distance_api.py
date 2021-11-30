@@ -92,7 +92,7 @@ def load_data():
         #extracting the polling location and passing the lat long for college and polling into main_distance
         #polling_location=list(data.loc[i,'nearest_polling_geometry'][7:-1].split())
     
-        x_pol,y_pol=data.loc[i,'Longitude_2020'],data.loc[i,'Latitude_2020']
+        x_pol,y_pol=data.loc[i,'Longitude_2020_early'],data.loc[i,'Latitude_2020_early']
         x_col,y_col=data.loc[i,'centroid_long'],data.loc[i,'centroid_lat']
 
         main_distance(str(y_col),str(x_col),str(y_pol),str(x_pol),data,i)
