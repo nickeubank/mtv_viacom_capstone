@@ -84,6 +84,7 @@ data['Region'] = data['STATE'].apply(lambda x: states[x])
 
 data['Region'] = data['Region'].apply(lambda x: regions[x])
 
+data = data[data['Region'] != 'Other']
 data.to_file(
     "../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson", driver="GeoJSON"
 )
