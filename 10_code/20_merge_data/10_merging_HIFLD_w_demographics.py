@@ -4,10 +4,10 @@ import pandas as pd
 # Little helper function for later
 
 
+
 ############
 # Import pre-cleaned HIFLD polygons
 ############
-
 
 def string_punc(test_str):
 
@@ -31,19 +31,17 @@ def string_punc(test_str):
     except:
         return "Null"
 
-
-# import the geo_df and master_df
+#import the geo_df and master_df
 geo_df = gpd.read_file("../../20_intermediate_files/10_HIFLD_campus_polygons.geojson")
-master_df = pd.read_csv(
-    "../../00_source_data/PlusOne_College_Demographic_Data/SLSV Master Campus Sheet - Master Sheet.csv",
+master_df = pd.read_csv( "../../00_source_data/PlusOne_College_Demographic_Data/SLSV Master Campus Sheet - Master Sheet.csv",
     header=1,
 )
 print("Original Master:", len(master_df))
 
-# applying the string punctuations
+#applying the string punctuations
 master_df["preprocessed_name"] = master_df["School Name"].apply(string_punc)
 geo_df["preprocessed_name"] = geo_df["preprocessed_name"].apply(string_punc)
-master_df = master_df.drop_duplicates()
+master_df=master_df.drop_duplicates()
 master_df = master_df[
     ~master_df["preprocessed_name"].str.contains(
         "policy|law|phd|graduate|grad|health|medicine|medical"
@@ -52,18 +50,19 @@ master_df = master_df[
     )
 ]
 
-# Helping to remove the Many to Many Match
-master_df = master_df[master_df["IPED ID"] != "Hawaii Community College"]
-master_df = master_df[master_df["IPED ID"] != "485263.00"]
-master_df = master_df[master_df["IPED ID"] != "101949.00"]
-master_df = master_df[master_df["IPED ID"] != "155636.00"]
+#Helping to remove the Many to Many Match
+master_df=master_df[master_df['IPED ID']!='Hawaii Community College']
+master_df=master_df[master_df['IPED ID']!='485263.00']
+master_df=master_df[master_df['IPED ID']!='101949.00']
+master_df = master_df[master_df['IPED ID'] != '155636.00']
 
-geo_df = geo_df.loc[~geo_df.duplicated(["preprocessed_name", "STATE"])]
+geo_df = geo_df.loc[~geo_df.duplicated(['preprocessed_name', "STATE"])]
 
-geo_df = geo_df[geo_df["UNIQUEID"] != "459082"]
-geo_df = geo_df[geo_df["UNIQUEID"] != "241128"]
+geo_df=geo_df[geo_df['UNIQUEID']!='459082']
+geo_df=geo_df[geo_df['UNIQUEID']!='241128']
 
 print("Updated Master:", len(master_df))
+
 
 # Hand subs
 subs = [
@@ -390,11 +389,11 @@ for s in subs:
 print("Length of Master Table:", len(master_df))
 merged_data = geo_df.merge(
     master_df,
-    left_on=["preprocessed_name", "STATE"],
-    right_on=["preprocessed_name", "State"],
-    how="outer",
+    left_on = ['preprocessed_name', 'STATE'],
+    right_on = ['preprocessed_name', 'State'],
+    how="inner",
     indicator=True,
-    validate="1:1",
+    validate='1:1'
 )
 
 # Drop do inner -- do outer, check
@@ -414,30 +413,13 @@ final_data = final_data.drop_duplicates(subset="NAME", keep="first")
 # not_merged = set(master_df["preprocessed_name"]) - set(final_data["preprocessed_name"])
 # not_merged = not_merged.tolist()
 
-# not_merged = merged_data[merged_data._merge != "both"]
-# not_merged = pd.DataFrame(not_merged)
-# not_merged.to_csv(
-#     "../../20_intermediate_files/15_polygons_not_merged_w_demographics.csv"
-# )
-# Export results to review
-for i in ["left_only", "right_only"]:
-    subset = merged_data[merged_data._merge == i].sort_values(
-        ["STATE", "State", "preprocessed_name"]
-    )
-
-    if i == "right_only":
-        front = ["School Name", "Institution Type", "City", "Longitude", "Latitude"]
-    else:
-        front = []
-
-    subset[
-        ["STATE", "State", "preprocessed_name"] + front + subset.columns.tolist()
-    ].to_csv(f"../../20_intermediate_files/00_merge_tweaks/{i}.csv")
-
+not_merged = merged_data[merged_data._merge != "both"]
+not_merged = pd.DataFrame(not_merged)
+not_merged.to_csv("../../20_intermediate_files/15_polygons_not_merged_w_demographics.csv")
 
 print("Length of Merged Table without duplicates:", len(final_data))
 
 final_data = final_data.drop("_merge", axis="columns")
-final_data.to_file(
-    "../../20_intermediate_files/20_campus_polygons_w_demographics.geojson"
-)
+final_data.to_file("../../20_intermediate_files/20_campus_polygons_w_demographics.geojson")
+
+
