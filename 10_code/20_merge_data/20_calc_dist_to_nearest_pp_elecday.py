@@ -37,6 +37,7 @@ campuses = campuses.drop(columns=['SLSV Coalition', 'ALL IN', 'AGF', 'Ask Every 
 campuses = campuses.to_crs(wkt)
 
 campuses = campuses.copy()
+print('Pre # of campuses: {}'.format(len(campuses)))
 
 #Get set of states common to all polling place data
 p = gpd.read_file(
@@ -49,10 +50,11 @@ for year in [2012, 2016, 2018, 2020]:
     p = gpd.read_file(
         f"../../20_intermediate_files/10_polling_places/{year}_elecday_cpi.geojson"
     )
-    state_set = set(state_set & set(p['state'].unique()))
+    state_set = state_set.intersection(set(p['state'].unique()))
     
 #Limit campuses to those within our common states
 campuses = campuses[campuses['STATE'].isin(state_set)]
+print('Within State Set # of campuses: {}'.format(len(campuses)))
 temp_list = []
 
 # Load all polling data, get nearest
