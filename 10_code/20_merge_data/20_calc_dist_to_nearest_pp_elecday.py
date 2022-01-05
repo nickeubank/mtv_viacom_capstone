@@ -92,7 +92,9 @@ for i in range(1,len(temp_list)):
 #Set final df
 final_df = temp_list[0]
 
+##############################
 #Add Ballot Ready Polling Data
+##############################
 p = gpd.read_file(
         f"../../20_intermediate_files/10_polling_places/2020_BallotReady_Early.geojson"
     )
@@ -116,7 +118,59 @@ for state in state_set:
     temp = pd.concat([temp, temp1])
 final_df = final_df.merge(temp.iloc[:,[0,-3,-2,-1]],on='UNIQUEID',how='inner')
 
+######################
+#Add Nearest Starbucks
+######################
+s = gpd.read_file(
+        f"../../00_source_data/store_locations/Starbucks_USA.csv"
+    )
+s = gpd.GeoDataFrame(s,geometry=gpd.points_from_xy(s['Longitude'], s['Latitude']))
+s = s.set_crs(epsg=4326)
+s = s.to_crs(wkt)
+#Save a copy of polling place geometries
+s = s[["State", "Latitude", "Longitude", "geometry"]]
+year = 'starbucks'
+s = s.rename({"State": f"state_{year}"}, axis="columns")
+s = s.rename({"Latitude": f"Latitude_{year}"}, axis="columns")
+s = s.rename({"Longitude": f"Longitude_{year}"}, axis="columns")
+temp = pd.DataFrame()
+#Loop through states and merge with final dataframe
+for state in state_set:
+    temp1 = pd.DataFrame()
+    temp1 = campuses[campuses['STATE'] == state].sjoin_nearest(s[s[f"state_{year}"] == state], distance_col=f"distances_{year}", how="left")
+    #Remove multiple equidistant Starbucks
+    temp1 = temp1.drop_duplicates(subset=['UNIQUEID'], keep='last')
+    temp = pd.concat([temp, temp1])
+final_df = final_df.merge(temp.iloc[:,[0,-3,-2,-1]],on='UNIQUEID',how='inner')
+
+######################
+#Add Nearest Target
+######################
+s = gpd.read_file(
+        f"../../00_source_data/store_locations/Target_USA.csv"
+    )
+s = gpd.GeoDataFrame(s,geometry=gpd.points_from_xy(s['Longitude'], s['Latitude']))
+s = s.set_crs(epsg=4326)
+s = s.to_crs(wkt)
+#Save a copy of polling place geometries
+s = s[["State", "Latitude", "Longitude", "geometry"]]
+year = 'target'
+s = s.rename({"State": f"state_{year}"}, axis="columns")
+s = s.rename({"Latitude": f"Latitude_{year}"}, axis="columns")
+s = s.rename({"Longitude": f"Longitude_{year}"}, axis="columns")
+temp = pd.DataFrame()
+#Loop through states and merge with final dataframe
+for state in state_set:
+    temp1 = pd.DataFrame()
+    temp1 = campuses[campuses['STATE'] == state].sjoin_nearest(s[s[f"state_{year}"] == state], distance_col=f"distances_{year}", how="left")
+    #Remove multiple equidistant Targets
+    temp1 = temp1.drop_duplicates(subset=['UNIQUEID'], keep='last')
+    temp = pd.concat([temp, temp1])
+final_df = final_df.merge(temp.iloc[:,[0,-3,-2,-1]],on='UNIQUEID',how='inner')
+
 #Save to file
 final_df.to_file(
     "../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson",
     driver="GeoJSON")
+final_df.to_csv(
+    "../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.csv")
