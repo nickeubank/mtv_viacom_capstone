@@ -74,8 +74,9 @@ regions={
 }
 
 
-data=gpd.read_file("../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson")
+#data=gpd.read_file("../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson")
 
+data=pd.read_csv("../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.csv")
 data.loc[(data.STATE == 'NJ '),'STATE']='NJ'
 data.loc[(data.STATE == 'OH '),'STATE']='OH'
 
@@ -85,6 +86,7 @@ data['Region'] = data['STATE'].apply(lambda x: states[x])
 data['Region'] = data['Region'].apply(lambda x: regions[x])
 
 data = data[data['Region'] != 'Other']
-data.to_file(
-    "../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson", driver="GeoJSON"
-)
+_=data.to_csv("../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.csv")
+#data.to_file(
+#    "../../20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson", driver="GeoJSON"
+#)
