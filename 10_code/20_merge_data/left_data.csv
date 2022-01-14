@@ -1,4 +1,5 @@
 ,preprocessed_name,NAME,CITY_x,STATE
+2065,alaskapacificuniversity,ALASKA PACIFIC UNIVERSITY,Anchorage,AK
 1149,amridgeuniversity,AMRIDGE UNIVERSITY,Montgomery,AL
 1139,bevillstatecommunitycollege,BEVILL STATE COMMUNITY COLLEGE,Jasper,AL
 1146,columbiasouthernuniversity,COLUMBIA SOUTHERN UNIVERSITY,Orange Beach,AL
@@ -24,12 +25,12 @@
 547,southeastarkansascollege,SOUTHEAST ARKANSAS COLLEGE,Pine Bluff,AR
 531,universityarkansasmonticello,UNIVERSITY OF ARKANSAS AT MONTICELLO,Monticello,AR
 549,williamsbaptistuniversity,WILLIAMS BAPTIST UNIVERSITY,,AR
-1654,arizonastateuniversitydowntownphoenix,ARIZONA STATE UNIVERSITY-DOWNTOWN PHOENIX,Phoenix,AZ
-1650,arizonastateuniversitywest,ARIZONA STATE UNIVERSITY-WEST,Glendale,AZ
-1635,collegeamericaflagstaff,COLLEGEAMERICA-FLAGSTAFF,Flagstaff,AZ
-1633,collegeamericaphoenix,COLLEGEAMERICA-PHOENIX,Phoenix,AZ
-1647,prescottcollege,PRESCOTT COLLEGE,Prescott,AZ
-1649,yavapaicollege,YAVAPAI COLLEGE,Prescott,AZ
+1665,arizonastateuniversitydowntownphoenix,ARIZONA STATE UNIVERSITY-DOWNTOWN PHOENIX,Phoenix,AZ
+1661,arizonastateuniversitywest,ARIZONA STATE UNIVERSITY-WEST,Glendale,AZ
+1646,collegeamericaflagstaff,COLLEGEAMERICA-FLAGSTAFF,Flagstaff,AZ
+1644,collegeamericaphoenix,COLLEGEAMERICA-PHOENIX,Phoenix,AZ
+1658,prescottcollege,PRESCOTT COLLEGE,Prescott,AZ
+1660,yavapaicollege,YAVAPAI COLLEGE,Prescott,AZ
 732,antiochuniversitylosangeles,ANTIOCH UNIVERSITY-LOS ANGELES,Culver City,CA
 675,azusapacificuniversity,AZUSA PACIFIC UNIVERSITY,Azusa,CA
 679,buttecollege,BUTTE COLLEGE,Oroville,CA
@@ -77,9 +78,9 @@
 227,postuniversity,POST UNIVERSITY,Waterbury,CT
 343,americanuniversity,AMERICAN UNIVERSITY,Washington,DC
 350,trinitywashingtonuniversity,TRINITY WASHINGTON UNIVERSITY,Washington,DC
-1682,goldeybeacomcollege,GOLDEY-BEACOM COLLEGE,Wilmington,DE
-1683,wesleycollege,WESLEY COLLEGE,Dover,DE
-1681,wilmingtonuniversity,WILMINGTON UNIVERSITY,New Castle,DE
+1693,goldeybeacomcollege,GOLDEY-BEACOM COLLEGE,Wilmington,DE
+1694,wesleycollege,WESLEY COLLEGE,Dover,DE
+1692,wilmingtonuniversity,WILMINGTON UNIVERSITY,New Castle,DE
 1018,avemariauniversity,AVE MARIA UNIVERSITY,,FL
 1035,barryuniversity,BARRY UNIVERSITY,Miami,FL
 1034,bethunecookmanuniversity,BETHUNE-COOKMAN UNIVERSITY,Daytona Beach,FL
@@ -121,19 +122,20 @@
 1442,truettmcconnelluniversity,TRUETT MCCONNELL UNIVERSITY,Cleveland,GA
 1443,wesleyancollege,WESLEYAN COLLEGE,Macon,GA
 1445,youngharriscollege,YOUNG HARRIS COLLEGE,Young Harris,GA
-1759,coecollege,COE COLLEGE,Cedar Rapids,IA
-1760,cornellcollege,CORNELL COLLEGE,Mount Vernon,IA
-1753,desmoinesareacommunitycollege,DES MOINES AREA COMMUNITY COLLEGE,Ankeny,IA
-1761,dordtcollege,DORDT COLLEGE,Sioux Center,IA
-1764,ellsworthcommunitycollege,ELLSWORTH COMMUNITY COLLEGE,Iowa Falls,IA
-1765,grandviewuniversity,GRAND VIEW UNIVERSITY,Des Moines,IA
-1772,maharishiuniversitymanagement,MAHARISHI UNIVERSITY OF MANAGEMENT,Fairfield,IA
-1775,northiowaareacommunitycollege,NORTH IOWA AREA COMMUNITY COLLEGE,Mason City,IA
-1777,northwesterncollege,NORTHWESTERN COLLEGE,Orange City,IA
-1778,northwestiowacommunitycollege,NORTHWEST IOWA COMMUNITY COLLEGE,Sheldon,IA
-1751,southeasterncommunitycollege,SOUTHEASTERN COMMUNITY COLLEGE,West Burlington,IA
-1763,universitydubuque,UNIVERSITY OF DUBUQUE,Dubuque,IA
-1783,williampennuniversity,WILLIAM PENN UNIVERSITY,Oskaloosa,IA
+1500,chaminadeuniversityhonolulu,CHAMINADE UNIVERSITY OF HONOLULU,Honolulu,HI
+1770,coecollege,COE COLLEGE,Cedar Rapids,IA
+1771,cornellcollege,CORNELL COLLEGE,Mount Vernon,IA
+1764,desmoinesareacommunitycollege,DES MOINES AREA COMMUNITY COLLEGE,Ankeny,IA
+1772,dordtcollege,DORDT COLLEGE,Sioux Center,IA
+1775,ellsworthcommunitycollege,ELLSWORTH COMMUNITY COLLEGE,Iowa Falls,IA
+1776,grandviewuniversity,GRAND VIEW UNIVERSITY,Des Moines,IA
+1783,maharishiuniversitymanagement,MAHARISHI UNIVERSITY OF MANAGEMENT,Fairfield,IA
+1786,northiowaareacommunitycollege,NORTH IOWA AREA COMMUNITY COLLEGE,Mason City,IA
+1788,northwesterncollege,NORTHWESTERN COLLEGE,Orange City,IA
+1789,northwestiowacommunitycollege,NORTHWEST IOWA COMMUNITY COLLEGE,Sheldon,IA
+1762,southeasterncommunitycollege,SOUTHEASTERN COMMUNITY COLLEGE,West Burlington,IA
+1774,universitydubuque,UNIVERSITY OF DUBUQUE,Dubuque,IA
+1794,williampennuniversity,WILLIAM PENN UNIVERSITY,Oskaloosa,IA
 416,brighamyounguniversityidaho,BRIGHAM YOUNG UNIVERSITY-IDAHO,Rexburg,ID
 412,collegeidaho,THE COLLEGE OF IDAHO,Caldwell,ID
 415,northwestnazareneuniversity,NORTHWEST NAZARENE UNIVERSITY,Nampa,ID
@@ -152,37 +154,37 @@
 1053,resurrectionuniversity,RESURRECTION UNIVERSITY,Chicago,IL
 1128,saintaugustinecollege,SAINT AUGUSTINE COLLEGE,Chicago,IL
 1134,trinitychristiancollege,TRINITY CHRISTIAN COLLEGE,Palos Heights,IL
-2052,andersonuniversity,ANDERSON UNIVERSITY,Anderson,IN
-2055,depauwuniversity,DEPAUW UNIVERSITY,Greencastle,IN
-2056,earlhamcollege,EARLHAM COLLEGE,Richmond,IN
-2060,hanovercollege,HANOVER COLLEGE,Hanover,IN
-2061,holycrosscollege,HOLY CROSS COLLEGE,Notre Dame,IN
-2062,huntingtonuniversity,HUNTINGTON UNIVERSITY,Huntington,IN
-2063,ivytechcommunitycollege,IVY TECH COMMUNITY COLLEGE,Indianapolis,IN
-2077,manchesteruniversity,MANCHESTER UNIVERSITY,North Manchester,IN
-2078,marianuniversity,MARIAN UNIVERSITY,Indianapolis,IN
-2079,oaklandcityuniversity,OAKLAND CITY UNIVERSITY,Oakland City,IN
-1903,bakeruniversity,BAKER UNIVERSITY,Baldwin City,KS
-1905,bethanycollege,BETHANY COLLEGE,Lindsborg,KS
-1897,butlercommunitycollege,BUTLER COMMUNITY COLLEGE,El Dorado,KS
-1906,centralchristiancollegekansas,CENTRAL CHRISTIAN COLLEGE OF KANSAS,McPherson,KS
-1929,clevelanduniversitykansascity,CLEVELAND UNIVERSITY-KANSAS CITY,Overland Park,KS
-1913,friendsuniversity,FRIENDS UNIVERSITY,Wichita,KS
-1919,independencecommunitycollege,INDEPENDENCE COMMUNITY COLLEGE,Independence,KS
-1923,labettecommunitycollege,LABETTE COMMUNITY COLLEGE,Parsons,KS
-1924,mcphersoncollege,MCPHERSON COLLEGE,McPherson,KS
-1925,midamericanazareneuniversity,MIDAMERICA NAZARENE UNIVERSITY,Olathe,KS
-1932,pittsburgstateuniversity,PITTSBURG STATE UNIVERSITY,Pittsburg,KS
-1935,salinaareatechnicalcollege,SALINA AREA TECHNICAL COLLEGE,Salina,KS
-1926,sterlingcollege,STERLING COLLEGE,Sterling,KS
-1931,taborcollege,TABOR COLLEGE,Hillsboro,KS
-2018,alicelloydcollege,ALICE LLOYD COLLEGE,,KY
-2028,georgetowncollege,GEORGETOWN COLLEGE,Georgetown,KY
-2034,midwayuniversity,MIDWAY UNIVERSITY,Midway,KY
-2042,thomasmorecollege,THOMAS MORE COLLEGE,Crestview Hills,KY
-2015,transylvaniauniversity,TRANSYLVANIA UNIVERSITY,Lexington,KY
-2043,unioncollege,UNION COLLEGE,Barbourville,KY
-2027,universitycumberlands,UNIVERSITY OF THE CUMBERLANDS,Williamsburg,KY
+2067,andersonuniversity,ANDERSON UNIVERSITY,Anderson,IN
+2070,depauwuniversity,DEPAUW UNIVERSITY,Greencastle,IN
+2071,earlhamcollege,EARLHAM COLLEGE,Richmond,IN
+2075,hanovercollege,HANOVER COLLEGE,Hanover,IN
+2076,holycrosscollege,HOLY CROSS COLLEGE,Notre Dame,IN
+2077,huntingtonuniversity,HUNTINGTON UNIVERSITY,Huntington,IN
+2078,ivytechcommunitycollege,IVY TECH COMMUNITY COLLEGE,Indianapolis,IN
+2092,manchesteruniversity,MANCHESTER UNIVERSITY,North Manchester,IN
+2093,marianuniversity,MARIAN UNIVERSITY,Indianapolis,IN
+2094,oaklandcityuniversity,OAKLAND CITY UNIVERSITY,Oakland City,IN
+1914,bakeruniversity,BAKER UNIVERSITY,Baldwin City,KS
+1916,bethanycollege,BETHANY COLLEGE,Lindsborg,KS
+1908,butlercommunitycollege,BUTLER COMMUNITY COLLEGE,El Dorado,KS
+1917,centralchristiancollegekansas,CENTRAL CHRISTIAN COLLEGE OF KANSAS,McPherson,KS
+1940,clevelanduniversitykansascity,CLEVELAND UNIVERSITY-KANSAS CITY,Overland Park,KS
+1924,friendsuniversity,FRIENDS UNIVERSITY,Wichita,KS
+1930,independencecommunitycollege,INDEPENDENCE COMMUNITY COLLEGE,Independence,KS
+1934,labettecommunitycollege,LABETTE COMMUNITY COLLEGE,Parsons,KS
+1935,mcphersoncollege,MCPHERSON COLLEGE,McPherson,KS
+1936,midamericanazareneuniversity,MIDAMERICA NAZARENE UNIVERSITY,Olathe,KS
+1943,pittsburgstateuniversity,PITTSBURG STATE UNIVERSITY,Pittsburg,KS
+1946,salinaareatechnicalcollege,SALINA AREA TECHNICAL COLLEGE,Salina,KS
+1937,sterlingcollege,STERLING COLLEGE,Sterling,KS
+1942,taborcollege,TABOR COLLEGE,Hillsboro,KS
+2029,alicelloydcollege,ALICE LLOYD COLLEGE,,KY
+2039,georgetowncollege,GEORGETOWN COLLEGE,Georgetown,KY
+2045,midwayuniversity,MIDWAY UNIVERSITY,Midway,KY
+2053,thomasmorecollege,THOMAS MORE COLLEGE,Crestview Hills,KY
+2026,transylvaniauniversity,TRANSYLVANIA UNIVERSITY,Lexington,KY
+2054,unioncollege,UNION COLLEGE,Barbourville,KY
+2038,universitycumberlands,UNIVERSITY OF THE CUMBERLANDS,Williamsburg,KY
 206,batonrougecommunitycollege,BATON ROUGE COMMUNITY COLLEGE,Baton Rouge,LA
 177,delgadocommunitycollege,DELGADO COMMUNITY COLLEGE,New Orleans,LA
 182,gramblingstateuniversity,GRAMBLING STATE UNIVERSITY,Grambling,LA
@@ -196,38 +198,38 @@
 200,southernuniversityneworleans,SOUTHERN UNIVERSITY AT NEW ORLEANS,New Orleans,LA
 194,universityholycross,UNIVERSITY OF HOLY CROSS,New Orleans,LA
 203,xavieruniversitylouisiana,XAVIER UNIVERSITY OF LOUISIANA,New Orleans,LA
-1506,americaninternationalcollege,AMERICAN INTERNATIONAL COLLEGE,Springfield,MA
-1509,assumptioncollege,ASSUMPTION COLLEGE,Worcester,MA
-1510,babsoncollege,BABSON COLLEGE,Babson Park,MA
-1517,baypathuniversity,BAY PATH UNIVERSITY,Longmeadow,MA
-1499,baystatecollege,BAY STATE COLLEGE,Boston,MA
-1498,beckercollege,BECKER COLLEGE,Worcester,MA
-1528,benjaminfranklininstitutetechnology,BENJAMIN FRANKLIN INSTITUTE OF TECHNOLOGY,Boston,MA
-1496,bostoncollege,BOSTON COLLEGE,Chestnut Hill,MA
-1521,bunkerhillcommunitycollege,BUNKER HILL COMMUNITY COLLEGE,Boston,MA
-1533,collegeholycross,COLLEGE OF THE HOLY CROSS,Worcester,MA
-1524,currycollege,CURRY COLLEGE,Milton,MA
-1513,easternnazarenecollege,EASTERN NAZARENE COLLEGE,Quincy,MA
-1514,endicottcollege,ENDICOTT COLLEGE,Beverly,MA
-1515,fishercollege,FISHER COLLEGE,Boston,MA
-1575,franklinwolincollegeengineering,FRANKLIN W OLIN COLLEGE OF ENGINEERING,Needham,MA
-1531,hampshirecollege,HAMPSHIRE COLLEGE,Amherst,MA
-1535,lasellcollege,LASELL COLLEGE,Newton,MA
-1546,merrimackcollege,MERRIMACK COLLEGE,North Andover,MA
-1550,newburycollege,NEWBURY COLLEGE,Brookline,MA
-1551,nicholscollege,NICHOLS COLLEGE,Dudley,MA
-1495,northshorecommunitycollege,NORTH SHORE COMMUNITY COLLEGE,Danvers,MA
-1555,quincycollege,QUINCY COLLEGE,Quincy,MA
-1561,springfieldcollege,SPRINGFIELD COLLEGE,Springfield,MA
-1563,stonehillcollege,STONEHILL COLLEGE,Easton,MA
-1564,suffolkuniversity,SUFFOLK UNIVERSITY,Boston,MA
-1537,universitymassachusettslowell,UNIVERSITY OF MASSACHUSETTS-LOWELL,Lowell,MA
-1504,urbancollegeboston,URBAN COLLEGE OF BOSTON,Boston,MA
-1566,wellesleycollege,WELLESLEY COLLEGE,Wellesley,MA
-1568,westernnewenglanduniversity,WESTERN NEW ENGLAND UNIVERSITY,Springfield,MA
-1569,westfieldstateuniversity,WESTFIELD STATE UNIVERSITY,Westfield,MA
-1570,wheatoncollege,WHEATON COLLEGE,Norton,MA
-1571,wheelockcollege,WHEELOCK COLLEGE,Boston,MA
+1517,americaninternationalcollege,AMERICAN INTERNATIONAL COLLEGE,Springfield,MA
+1520,assumptioncollege,ASSUMPTION COLLEGE,Worcester,MA
+1521,babsoncollege,BABSON COLLEGE,Babson Park,MA
+1528,baypathuniversity,BAY PATH UNIVERSITY,Longmeadow,MA
+1510,baystatecollege,BAY STATE COLLEGE,Boston,MA
+1509,beckercollege,BECKER COLLEGE,Worcester,MA
+1539,benjaminfranklininstitutetechnology,BENJAMIN FRANKLIN INSTITUTE OF TECHNOLOGY,Boston,MA
+1507,bostoncollege,BOSTON COLLEGE,Chestnut Hill,MA
+1532,bunkerhillcommunitycollege,BUNKER HILL COMMUNITY COLLEGE,Boston,MA
+1544,collegeholycross,COLLEGE OF THE HOLY CROSS,Worcester,MA
+1535,currycollege,CURRY COLLEGE,Milton,MA
+1524,easternnazarenecollege,EASTERN NAZARENE COLLEGE,Quincy,MA
+1525,endicottcollege,ENDICOTT COLLEGE,Beverly,MA
+1526,fishercollege,FISHER COLLEGE,Boston,MA
+1586,franklinwolincollegeengineering,FRANKLIN W OLIN COLLEGE OF ENGINEERING,Needham,MA
+1542,hampshirecollege,HAMPSHIRE COLLEGE,Amherst,MA
+1546,lasellcollege,LASELL COLLEGE,Newton,MA
+1557,merrimackcollege,MERRIMACK COLLEGE,North Andover,MA
+1561,newburycollege,NEWBURY COLLEGE,Brookline,MA
+1562,nicholscollege,NICHOLS COLLEGE,Dudley,MA
+1506,northshorecommunitycollege,NORTH SHORE COMMUNITY COLLEGE,Danvers,MA
+1566,quincycollege,QUINCY COLLEGE,Quincy,MA
+1572,springfieldcollege,SPRINGFIELD COLLEGE,Springfield,MA
+1574,stonehillcollege,STONEHILL COLLEGE,Easton,MA
+1575,suffolkuniversity,SUFFOLK UNIVERSITY,Boston,MA
+1548,universitymassachusettslowell,UNIVERSITY OF MASSACHUSETTS-LOWELL,Lowell,MA
+1515,urbancollegeboston,URBAN COLLEGE OF BOSTON,Boston,MA
+1577,wellesleycollege,WELLESLEY COLLEGE,Wellesley,MA
+1579,westernnewenglanduniversity,WESTERN NEW ENGLAND UNIVERSITY,Springfield,MA
+1580,westfieldstateuniversity,WESTFIELD STATE UNIVERSITY,Westfield,MA
+1581,wheatoncollege,WHEATON COLLEGE,Norton,MA
+1582,wheelockcollege,WHEELOCK COLLEGE,Boston,MA
 140,baltimorecitycommunitycollege,BALTIMORE CITY COMMUNITY COLLEGE,Baltimore,MD
 142,bowiestateuniversity,BOWIE STATE UNIVERSITY,Bowie,MD
 143,cecilcollege,CECIL COLLEGE,North East,MD
@@ -246,32 +248,32 @@
 161,universitymarylandeasternshore,UNIVERSITY OF MARYLAND EASTERN SHORE,,MD
 136,universitymarylanduniversitycollege,UNIVERSITY OF MARYLAND-UNIVERSITY COLLEGE,Adelphi,MD
 173,worwiccommunitycollege,WOR-WIC COMMUNITY COLLEGE,Salisbury,MD
-2234,mainemaritimeacademy,MAINE MARITIME ACADEMY,Castine,ME
-2225,saintjosephscollegemaine,SAINT JOSEPH'S COLLEGE OF MAINE,Standish,ME
-2239,thomascollege,THOMAS COLLEGE,Waterville,ME
-2240,unitycollege,UNITY COLLEGE,Unity,ME
-1807,calvincollege,CALVIN COLLEGE,Grand Rapids,MI
-1810,clearyuniversity,CLEARY UNIVERSITY,Howell,MI
-1809,cornerstoneuniversity,CORNERSTONE UNIVERSITY,Grand Rapids,MI
-1794,davenportuniversity,DAVENPORT UNIVERSITY,Grand Rapids,MI
-1815,glenoakscommunitycollege,GLEN OAKS COMMUNITY COLLEGE,Centreville,MI
-1852,hillsdalecollege,HILLSDALE COLLEGE,,MI
-1820,jacksoncollege,JACKSON COLLEGE,Jackson,MI
-1821,kalamazoocollege,KALAMAZOO COLLEGE,Kalamazoo,MI
-1795,kalamazoovalleycommunitycollege,KALAMAZOO VALLEY COMMUNITY COLLEGE,Kalamazoo,MI
-1824,lakemichigancollege,LAKE MICHIGAN COLLEGE,Benton Harbor,MI
-1799,macombcommunitycollege,MACOMB COMMUNITY COLLEGE,Warren,MI
-1827,marygrovecollege,MARYGROVE COLLEGE,Detroit,MI
-1832,michigantechnologicaluniversity,MICHIGAN TECHNOLOGICAL UNIVERSITY,Houghton,MI
-1837,montcalmcommunitycollege,MONTCALM COMMUNITY COLLEGE,Sidney,MI
-1838,northwooduniversity,NORTHWOOD UNIVERSITY,Midland,MI
-1840,olivetcollege,OLIVET COLLEGE,Olivet,MI
-1828,rochestercollege,ROCHESTER COLLEGE,Rochester Hills,MI
-1841,saginawvalleystateuniversity,SAGINAW VALLEY STATE UNIVERSITY,University Center,MI
-1843,stclaircountycommunitycollege,ST CLAIR COUNTY COMMUNITY COLLEGE,Port Huron,MI
-1848,washtenawcommunitycollege,WASHTENAW COMMUNITY COLLEGE,Ann Arbor,MI
-1790,waynecountycommunitycollegedistrict,WAYNE COUNTY COMMUNITY COLLEGE DISTRICT,Detroit,MI
-1789,westshorecommunitycollege,WEST SHORE COMMUNITY COLLEGE,Scottville,MI
+2249,mainemaritimeacademy,MAINE MARITIME ACADEMY,Castine,ME
+2240,saintjosephscollegemaine,SAINT JOSEPH'S COLLEGE OF MAINE,Standish,ME
+2254,thomascollege,THOMAS COLLEGE,Waterville,ME
+2255,unitycollege,UNITY COLLEGE,Unity,ME
+1818,calvincollege,CALVIN COLLEGE,Grand Rapids,MI
+1821,clearyuniversity,CLEARY UNIVERSITY,Howell,MI
+1820,cornerstoneuniversity,CORNERSTONE UNIVERSITY,Grand Rapids,MI
+1805,davenportuniversity,DAVENPORT UNIVERSITY,Grand Rapids,MI
+1826,glenoakscommunitycollege,GLEN OAKS COMMUNITY COLLEGE,Centreville,MI
+1863,hillsdalecollege,HILLSDALE COLLEGE,,MI
+1831,jacksoncollege,JACKSON COLLEGE,Jackson,MI
+1832,kalamazoocollege,KALAMAZOO COLLEGE,Kalamazoo,MI
+1806,kalamazoovalleycommunitycollege,KALAMAZOO VALLEY COMMUNITY COLLEGE,Kalamazoo,MI
+1835,lakemichigancollege,LAKE MICHIGAN COLLEGE,Benton Harbor,MI
+1810,macombcommunitycollege,MACOMB COMMUNITY COLLEGE,Warren,MI
+1838,marygrovecollege,MARYGROVE COLLEGE,Detroit,MI
+1843,michigantechnologicaluniversity,MICHIGAN TECHNOLOGICAL UNIVERSITY,Houghton,MI
+1848,montcalmcommunitycollege,MONTCALM COMMUNITY COLLEGE,Sidney,MI
+1849,northwooduniversity,NORTHWOOD UNIVERSITY,Midland,MI
+1851,olivetcollege,OLIVET COLLEGE,Olivet,MI
+1839,rochestercollege,ROCHESTER COLLEGE,Rochester Hills,MI
+1852,saginawvalleystateuniversity,SAGINAW VALLEY STATE UNIVERSITY,University Center,MI
+1854,stclaircountycommunitycollege,ST CLAIR COUNTY COMMUNITY COLLEGE,Port Huron,MI
+1859,washtenawcommunitycollege,WASHTENAW COMMUNITY COLLEGE,Ann Arbor,MI
+1801,waynecountycommunitycollegedistrict,WAYNE COUNTY COMMUNITY COLLEGE DISTRICT,Detroit,MI
+1800,westshorecommunitycollege,WEST SHORE COMMUNITY COLLEGE,Scottville,MI
 1252,alexandriatechnicalcommunitycollege,ALEXANDRIA TECHNICAL &amp; COMMUNITY COLLEGE,Alexandria,MN
 1254,anokaramseycommunitycollege,ANOKA-RAMSEY COMMUNITY COLLEGE,Coon Rapids,MN
 1307,anokaramseycommunitycollegecambridge,ANOKA-RAMSEY COMMUNITY COLLEGE - CAMBRIDGE,,MN
@@ -339,14 +341,14 @@
 1194,saintlouisuniversity,SAINT LOUIS UNIVERSITY,Saint Louis,MO
 1232,stephenscollege,STEPHENS COLLEGE,Columbia,MO
 1238,williamjewellcollege,WILLIAM JEWELL COLLEGE,Liberty,MO
-1576,blackfeetcommunitycollege,BLACKFEET COMMUNITY COLLEGE,Browning,MT
-1578,carrollcollege,CARROLL COLLEGE,Helena,MT
-1583,milescommunitycollege,MILES COMMUNITY COLLEGE,Miles City,MT
-1585,montanastateuniversity,MONTANA STATE UNIVERSITY,Bozeman,MT
-1587,montanastateuniversitynorthern,MONTANA STATE UNIVERSITY-NORTHERN,Havre,MT
-1589,salishkootenaicollege,SALISH KOOTENAI COLLEGE,Pablo,MT
-1577,stonechildcollege,STONE CHILD COLLEGE,Box Elder,MT
-1586,universitymontana,THE UNIVERSITY OF MONTANA,Missoula,MT
+1587,blackfeetcommunitycollege,BLACKFEET COMMUNITY COLLEGE,Browning,MT
+1589,carrollcollege,CARROLL COLLEGE,Helena,MT
+1594,milescommunitycollege,MILES COMMUNITY COLLEGE,Miles City,MT
+1596,montanastateuniversity,MONTANA STATE UNIVERSITY,Bozeman,MT
+1598,montanastateuniversitynorthern,MONTANA STATE UNIVERSITY-NORTHERN,Havre,MT
+1600,salishkootenaicollege,SALISH KOOTENAI COLLEGE,Pablo,MT
+1588,stonechildcollege,STONE CHILD COLLEGE,Box Elder,MT
+1597,universitymontana,THE UNIVERSITY OF MONTANA,Missoula,MT
 329,alamancecommunitycollege,ALAMANCE COMMUNITY COLLEGE,Graham,NC
 246,beaufortcountycommunitycollege,BEAUFORT COUNTY COMMUNITY COLLEGE,Washington,NC
 247,belmontabbeycollege,BELMONT ABBEY COLLEGE,Belmont,NC
@@ -413,13 +415,13 @@
 1330,rivieruniversity,RIVIER UNIVERSITY,Nashua,NH
 1331,saintanselmcollege,SAINT ANSELM COLLEGE,Manchester,NH
 1316,whitemountainscommunitycollege,WHITE MOUNTAINS COMMUNITY COLLEGE,Berlin,NH
-1677,mesalandscommunitycollege,MESALANDS COMMUNITY COLLEGE,Tucumcari,NM
-1660,navajotechnicaluniversity,NAVAJO TECHNICAL UNIVERSITY,Crownpoint,NM
-1665,newmexicojuniorcollege,NEW MEXICO JUNIOR COLLEGE,Hobbs,NM
-1675,northernnewmexicocollege,NORTHERN NEW MEXICO COLLEGE,Espanola,NM
-1680,southwesternindianpolytechnicinstitute,SOUTHWESTERN INDIAN POLYTECHNIC INSTITUTE,Albuquerque,NM
-1676,universitysouthwest,UNIVERSITY OF THE SOUTHWEST,Hobbs,NM
-1678,westernnewmexicouniversity,WESTERN NEW MEXICO UNIVERSITY,Silver City,NM
+1688,mesalandscommunitycollege,MESALANDS COMMUNITY COLLEGE,Tucumcari,NM
+1671,navajotechnicaluniversity,NAVAJO TECHNICAL UNIVERSITY,Crownpoint,NM
+1676,newmexicojuniorcollege,NEW MEXICO JUNIOR COLLEGE,Hobbs,NM
+1686,northernnewmexicocollege,NORTHERN NEW MEXICO COLLEGE,Espanola,NM
+1691,southwesternindianpolytechnicinstitute,SOUTHWESTERN INDIAN POLYTECHNIC INSTITUTE,Albuquerque,NM
+1687,universitysouthwest,UNIVERSITY OF THE SOUTHWEST,Hobbs,NM
+1689,westernnewmexicouniversity,WESTERN NEW MEXICO UNIVERSITY,Silver City,NM
 980,northwestcareercollege,NORTHWEST CAREER COLLEGE,,NV
 975,sierranevadacollege,SIERRA NEVADA COLLEGE,Incline Village,NV
 979,tourouniversitynevada,TOURO UNIVERSITY NEVADA,Henderson,NV
@@ -490,13 +492,13 @@
 524,ursulinecollege,URSULINE COLLEGE,Pepper Pike,OH
 465,washingtonstatecommunitycollege,WASHINGTON STATE COMMUNITY COLLEGE,Marietta,OH
 445,wilberforceuniversity,WILBERFORCE UNIVERSITY,Wilberforce,OH
-1595,baconecollege,BACONE COLLEGE,Muskogee,OK
-1592,collegemuscogeenation,COLLEGE OF THE MUSCOGEE NATION,Okmulgee,OK
-1627,communitycarecollege,COMMUNITY CARE COLLEGE,Tulsa,OK
-1604,langstonuniversity,LANGSTON UNIVERSITY,Langston,OK
-1611,oklahomabaptistuniversity,OKLAHOMA BAPTIST UNIVERSITY,Shawnee,OK
-1622,southwesternchristianuniversity,SOUTHWESTERN CHRISTIAN UNIVERSITY,Bethany,OK
-1614,universityoklahomanormancampus,UNIVERSITY OF OKLAHOMA-NORMAN CAMPUS,Norman,OK
+1606,baconecollege,BACONE COLLEGE,Muskogee,OK
+1603,collegemuscogeenation,COLLEGE OF THE MUSCOGEE NATION,Okmulgee,OK
+1638,communitycarecollege,COMMUNITY CARE COLLEGE,Tulsa,OK
+1615,langstonuniversity,LANGSTON UNIVERSITY,Langston,OK
+1622,oklahomabaptistuniversity,OKLAHOMA BAPTIST UNIVERSITY,Shawnee,OK
+1633,southwesternchristianuniversity,SOUTHWESTERN CHRISTIAN UNIVERSITY,Bethany,OK
+1625,universityoklahomanormancampus,UNIVERSITY OF OKLAHOMA-NORMAN CAMPUS,Norman,OK
 10,albrightcollege,ALBRIGHT COLLEGE,Reading,PA
 19,brynmawrcollege,BRYN MAWR COLLEGE,Bryn Mawr,PA
 23,cabriniuniversity,CABRINI UNIVERSITY,Radnor,PA
@@ -537,7 +539,7 @@
 105,washingtonjeffersoncollege,WASHINGTON &amp; JEFFERSON COLLEGE,Washington,PA
 111,yorkcollegepennsylvania,YORK COLLEGE OF PENNSYLVANIA,York,PA
 112,yticareerinstituteyork,YTI CAREER INSTITUTE-YORK,York,PA
-2011,communitycollegerhodeisland,COMMUNITY COLLEGE OF RHODE ISLAND,Warwick,RI
+2022,communitycollegerhodeisland,COMMUNITY COLLEGE OF RHODE ISLAND,Warwick,RI
 592,allenuniversity,ALLEN UNIVERSITY,Columbia,SC
 595,benedictcollege,BENEDICT COLLEGE,Columbia,SC
 593,charlestonsouthernuniversity,CHARLESTON SOUTHERN UNIVERSITY,Charleston,SC
@@ -560,94 +562,94 @@
 1391,southeasttechnicalinstitute,SOUTHEAST TECHNICAL INSTITUTE,Sioux Falls,SD
 1390,universitysiouxfalls,UNIVERSITY OF SIOUX FALLS,Sioux Falls,SD
 1393,westerndakotatechnicalinstitute,WESTERN DAKOTA TECHNICAL INSTITUTE,Rapid City,SD
-1861,bryancollegedayton,BRYAN COLLEGE-DAYTON,Dayton,TN
-1869,fiskuniversity,FISK UNIVERSITY,Nashville,TN
-1870,freedhardemanuniversity,FREED-HARDEMAN UNIVERSITY,,TN
-1893,lincolnmemorialuniversity,LINCOLN MEMORIAL UNIVERSITY,Harrogate,TN
-1867,lipscombuniversity,LIPSCOMB UNIVERSITY,Nashville,TN
-1894,milligancollege,MILLIGAN COLLEGE,Milligan College,TN
-1880,rhodescollege,RHODES COLLEGE,Memphis,TN
-1884,tennesseewesleyanuniversity,TENNESSEE WESLEYAN UNIVERSITY,Athens,TN
-1888,treveccanazareneuniversity,TREVECCA NAZARENE UNIVERSITY,Nashville,TN
-1890,unionuniversity,UNION UNIVERSITY,Jackson,TN
-1858,welchcollege,WELCH COLLEGE,Gallatin,TN
-2100,abilenechristianuniversity,ABILENE CHRISTIAN UNIVERSITY,Abilene,TX
-2213,altieruscareercollegebissonnet,ALTIERUS CAREER COLLEGE-BISSONNET,Houston,TX
-2101,alvincommunitycollege,ALVIN COMMUNITY COLLEGE,Alvin,TX
-2104,austincollege,AUSTIN COLLEGE,Sherman,TX
-2095,baptisthealthsystemschoolhealthprofessions,BAPTIST HEALTH SYSTEM SCHOOL OF HEALTH PROFESSIONS,San Antonio,TX
-2109,brookhavencollege,BROOKHAVEN COLLEGE,Farmers Branch,TX
-2110,cedarvalleycollege,CEDAR VALLEY COLLEGE,Lancaster,TX
-2111,ciscocollege,CISCO COLLEGE,Cisco,TX
-2112,clarendoncollege,CLARENDON COLLEGE,Clarendon,TX
-2089,coastalbendcollege,COASTAL BEND COLLEGE,Beeville,TX
-2208,collegebiblicalstudieshouston,COLLEGE OF BIBLICAL STUDIES-HOUSTON,Houston,TX
-2116,dallasbaptistuniversity,DALLAS BAPTIST UNIVERSITY,Dallas,TX
-2121,eastfieldcollege,EASTFIELD COLLEGE,Mesquite,TX
-2124,graysoncollege,GRAYSON COLLEGE,Denison,TX
-2127,hillcollege,HILL COLLEGE,Hillsboro,TX
-2133,howardcollege,HOWARD COLLEGE,Big Spring,TX
-2135,hustontillotsonuniversity,HUSTON-TILLOTSON UNIVERSITY,,TX
-2137,jacksonvillecollegemaincampus,JACKSONVILLE COLLEGE-MAIN CAMPUS,Jacksonville,TX
-2138,jarvischristiancollege,JARVIS CHRISTIAN COLLEGE,Hawkins,TX
-2139,kilgorecollege,KILGORE COLLEGE,Kilgore,TX
-2097,kingsuniversity,THE KING'S UNIVERSITY,Southlake,TX
-2218,lamarinstitutetechnology,LAMAR INSTITUTE OF TECHNOLOGY,Beaumont,TX
-2140,lamarstatecollegeorange,LAMAR STATE COLLEGE-ORANGE,Orange,TX
-2131,lamaruniversity,LAMAR UNIVERSITY,Beaumont,TX
-2143,letourneauuniversity,LETOURNEAU UNIVERSITY,Longview,TX
-2149,midwesternstateuniversity,MIDWESTERN STATE UNIVERSITY,Wichita Falls,TX
-2150,mountainviewcollege,MOUNTAIN VIEW COLLEGE,Dallas,TX
-2114,northcentraltexascollege,NORTH CENTRAL TEXAS COLLEGE,Gainesville,TX
-2154,northeasttexascommunitycollege,NORTHEAST TEXAS COMMUNITY COLLEGE,Mount Pleasant,TX
-2152,northlakecollege,NORTH LAKE COLLEGE,Irving,TX
-2155,odessacollege,ODESSA COLLEGE,Odessa,TX
-2162,rangercollege,RANGER COLLEGE,Ranger,TX
-2164,richlandcollege,RICHLAND COLLEGE,Dallas,TX
-2168,schreineruniversity,SCHREINER UNIVERSITY,Kerrville,TX
-2209,southtexascollege,SOUTH TEXAS COLLEGE,McAllen,TX
-2173,southwesternassembliesgoduniversity,SOUTHWESTERN ASSEMBLIES OF GOD UNIVERSITY,Waxahachie,TX
-2179,templecollege,TEMPLE COLLEGE,Temple,TX
-2142,texasaminternationaluniversity,TEXAS A &amp; M INTERNATIONAL UNIVERSITY,Laredo,TX
-2216,texasamuniversitysanantonio,TEXAS A&amp;M UNIVERSITY-SAN ANTONIO,San Antonio,TX
-2120,texasamuniversitytexarkana,TEXAS A&amp;M UNIVERSITY-TEXARKANA,Texarkana,TX
-2189,texascollege,TEXAS COLLEGE,Tyler,TX
-2193,texassouthernuniversity,TEXAS SOUTHERN UNIVERSITY,Houston,TX
-2215,texasstatetechnicalcollege,TEXAS STATE TECHNICAL COLLEGE,Waco,TX
-2195,texaswesleyanuniversity,TEXAS WESLEYAN UNIVERSITY,Fort Worth,TX
-2130,universityhoustonvictoria,UNIVERSITY OF HOUSTON-VICTORIA,Victoria,TX
-2136,universityincarnateword,UNIVERSITY OF THE INCARNATE WORD,San Antonio,TX
-2212,universitynorthtexasdallas,UNIVERSITY OF NORTH TEXAS AT DALLAS,Dallas,TX
-2157,universitytexasriograndevalley,THE UNIVERSITY OF TEXAS RIO GRANDE VALLEY,Edinburg,TX
-2200,victoriacollege,VICTORIA COLLEGE,Victoria,TX
-2202,weatherfordcollege,WEATHERFORD COLLEGE,Weatherford,TX
-2204,westerntexascollege,WESTERN TEXAS COLLEGE,Snyder,TX
-2205,wileycollege,WILEY COLLEGE,Marshall,TX
+1872,bryancollegedayton,BRYAN COLLEGE-DAYTON,Dayton,TN
+1880,fiskuniversity,FISK UNIVERSITY,Nashville,TN
+1881,freedhardemanuniversity,FREED-HARDEMAN UNIVERSITY,,TN
+1904,lincolnmemorialuniversity,LINCOLN MEMORIAL UNIVERSITY,Harrogate,TN
+1878,lipscombuniversity,LIPSCOMB UNIVERSITY,Nashville,TN
+1905,milligancollege,MILLIGAN COLLEGE,Milligan College,TN
+1891,rhodescollege,RHODES COLLEGE,Memphis,TN
+1895,tennesseewesleyanuniversity,TENNESSEE WESLEYAN UNIVERSITY,Athens,TN
+1899,treveccanazareneuniversity,TREVECCA NAZARENE UNIVERSITY,Nashville,TN
+1901,unionuniversity,UNION UNIVERSITY,Jackson,TN
+1869,welchcollege,WELCH COLLEGE,Gallatin,TN
+2115,abilenechristianuniversity,ABILENE CHRISTIAN UNIVERSITY,Abilene,TX
+2228,altieruscareercollegebissonnet,ALTIERUS CAREER COLLEGE-BISSONNET,Houston,TX
+2116,alvincommunitycollege,ALVIN COMMUNITY COLLEGE,Alvin,TX
+2119,austincollege,AUSTIN COLLEGE,Sherman,TX
+2110,baptisthealthsystemschoolhealthprofessions,BAPTIST HEALTH SYSTEM SCHOOL OF HEALTH PROFESSIONS,San Antonio,TX
+2124,brookhavencollege,BROOKHAVEN COLLEGE,Farmers Branch,TX
+2125,cedarvalleycollege,CEDAR VALLEY COLLEGE,Lancaster,TX
+2126,ciscocollege,CISCO COLLEGE,Cisco,TX
+2127,clarendoncollege,CLARENDON COLLEGE,Clarendon,TX
+2104,coastalbendcollege,COASTAL BEND COLLEGE,Beeville,TX
+2223,collegebiblicalstudieshouston,COLLEGE OF BIBLICAL STUDIES-HOUSTON,Houston,TX
+2131,dallasbaptistuniversity,DALLAS BAPTIST UNIVERSITY,Dallas,TX
+2136,eastfieldcollege,EASTFIELD COLLEGE,Mesquite,TX
+2139,graysoncollege,GRAYSON COLLEGE,Denison,TX
+2142,hillcollege,HILL COLLEGE,Hillsboro,TX
+2148,howardcollege,HOWARD COLLEGE,Big Spring,TX
+2150,hustontillotsonuniversity,HUSTON-TILLOTSON UNIVERSITY,,TX
+2152,jacksonvillecollegemaincampus,JACKSONVILLE COLLEGE-MAIN CAMPUS,Jacksonville,TX
+2153,jarvischristiancollege,JARVIS CHRISTIAN COLLEGE,Hawkins,TX
+2154,kilgorecollege,KILGORE COLLEGE,Kilgore,TX
+2112,kingsuniversity,THE KING'S UNIVERSITY,Southlake,TX
+2233,lamarinstitutetechnology,LAMAR INSTITUTE OF TECHNOLOGY,Beaumont,TX
+2155,lamarstatecollegeorange,LAMAR STATE COLLEGE-ORANGE,Orange,TX
+2146,lamaruniversity,LAMAR UNIVERSITY,Beaumont,TX
+2158,letourneauuniversity,LETOURNEAU UNIVERSITY,Longview,TX
+2164,midwesternstateuniversity,MIDWESTERN STATE UNIVERSITY,Wichita Falls,TX
+2165,mountainviewcollege,MOUNTAIN VIEW COLLEGE,Dallas,TX
+2129,northcentraltexascollege,NORTH CENTRAL TEXAS COLLEGE,Gainesville,TX
+2169,northeasttexascommunitycollege,NORTHEAST TEXAS COMMUNITY COLLEGE,Mount Pleasant,TX
+2167,northlakecollege,NORTH LAKE COLLEGE,Irving,TX
+2170,odessacollege,ODESSA COLLEGE,Odessa,TX
+2177,rangercollege,RANGER COLLEGE,Ranger,TX
+2179,richlandcollege,RICHLAND COLLEGE,Dallas,TX
+2183,schreineruniversity,SCHREINER UNIVERSITY,Kerrville,TX
+2224,southtexascollege,SOUTH TEXAS COLLEGE,McAllen,TX
+2188,southwesternassembliesgoduniversity,SOUTHWESTERN ASSEMBLIES OF GOD UNIVERSITY,Waxahachie,TX
+2194,templecollege,TEMPLE COLLEGE,Temple,TX
+2157,texasaminternationaluniversity,TEXAS A &amp; M INTERNATIONAL UNIVERSITY,Laredo,TX
+2231,texasamuniversitysanantonio,TEXAS A&amp;M UNIVERSITY-SAN ANTONIO,San Antonio,TX
+2135,texasamuniversitytexarkana,TEXAS A&amp;M UNIVERSITY-TEXARKANA,Texarkana,TX
+2204,texascollege,TEXAS COLLEGE,Tyler,TX
+2208,texassouthernuniversity,TEXAS SOUTHERN UNIVERSITY,Houston,TX
+2230,texasstatetechnicalcollege,TEXAS STATE TECHNICAL COLLEGE,Waco,TX
+2210,texaswesleyanuniversity,TEXAS WESLEYAN UNIVERSITY,Fort Worth,TX
+2145,universityhoustonvictoria,UNIVERSITY OF HOUSTON-VICTORIA,Victoria,TX
+2151,universityincarnateword,UNIVERSITY OF THE INCARNATE WORD,San Antonio,TX
+2227,universitynorthtexasdallas,UNIVERSITY OF NORTH TEXAS AT DALLAS,Dallas,TX
+2172,universitytexasriograndevalley,THE UNIVERSITY OF TEXAS RIO GRANDE VALLEY,Edinburg,TX
+2215,victoriacollege,VICTORIA COLLEGE,Victoria,TX
+2217,weatherfordcollege,WEATHERFORD COLLEGE,Weatherford,TX
+2219,westerntexascollege,WESTERN TEXAS COLLEGE,Snyder,TX
+2220,wileycollege,WILEY COLLEGE,Marshall,TX
 426,brighamyounguniversityprovo,BRIGHAM YOUNG UNIVERSITY-PROVO,Provo,UT
 433,neumontcollegecomputerscience,NEUMONT COLLEGE OF COMPUTER SCIENCE,Salt Lake City,UT
 420,ogdenwebertechnicalcollege,OGDEN-WEBER TECHNICAL COLLEGE,Ogden,UT
 421,stevenshenagercollege,STEVENS-HENAGER COLLEGE,Salt Lake City,UT
 434,stevenshenagercollegestgeorgeutahcampus,STEVENS HENAGER COLLEGE - ST GEORGE UTAH CAMPUS,St. George,UT
 419,utahvalleyuniversity,UTAH VALLEY UNIVERSITY,Orem,UT
-1974,americannationaluniversity,AMERICAN NATIONAL UNIVERSITY,Salem,VA
-1944,bluefieldcollege,BLUEFIELD COLLEGE,Bluefield,VA
-2003,bryantstrattoncollegehampton,BRYANT &amp; STRATTON COLLEGE-HAMPTON,Hampton,VA
-1951,bryantstrattoncollegerichmond,BRYANT &amp; STRATTON COLLEGE-RICHMOND,North Chesterfield,VA
-1946,collegewilliammary,COLLEGE OF WILLIAM AND MARY,Williamsburg,VA
-1954,easternshorecommunitycollege,EASTERN SHORE COMMUNITY COLLEGE,Melfa,VA
-1955,ferrumcollege,FERRUM COLLEGE,Ferrum,VA
-1959,hamptonuniversity,HAMPTON UNIVERSITY,Hampton,VA
-1960,hollinsuniversity,HOLLINS UNIVERSITY,Roanoke,VA
-1964,jamesmadisonuniversity,JAMES MADISON UNIVERSITY,Harrisonburg,VA
-1963,norfolkstateuniversity,NORFOLK STATE UNIVERSITY,Norfolk,VA
-1982,randolphcollege,RANDOLPH COLLEGE,Lynchburg,VA
-1947,regentuniversity,REGENT UNIVERSITY,Virginia Beach,VA
-1984,richardblandcollege,RICHARD BLAND COLLEGE,South Prince George,VA
-1941,stratforduniversity,STRATFORD UNIVERSITY,Fairfax,VA
-1990,sweetbriarcollege,SWEET BRIAR COLLEGE,Sweet Briar,VA
-1971,universitymarywashington,UNIVERSITY OF MARY WASHINGTON,Fredericksburg,VA
-1986,universityrichmond,UNIVERSITY OF RICHMOND,University of Richmond,VA
-1998,virginiamilitaryinstitute,VIRGINIA MILITARY INSTITUTE,Lexington,VA
+1985,americannationaluniversity,AMERICAN NATIONAL UNIVERSITY,Salem,VA
+1955,bluefieldcollege,BLUEFIELD COLLEGE,Bluefield,VA
+2014,bryantstrattoncollegehampton,BRYANT &amp; STRATTON COLLEGE-HAMPTON,Hampton,VA
+1962,bryantstrattoncollegerichmond,BRYANT &amp; STRATTON COLLEGE-RICHMOND,North Chesterfield,VA
+1957,collegewilliammary,COLLEGE OF WILLIAM AND MARY,Williamsburg,VA
+1965,easternshorecommunitycollege,EASTERN SHORE COMMUNITY COLLEGE,Melfa,VA
+1966,ferrumcollege,FERRUM COLLEGE,Ferrum,VA
+1970,hamptonuniversity,HAMPTON UNIVERSITY,Hampton,VA
+1971,hollinsuniversity,HOLLINS UNIVERSITY,Roanoke,VA
+1975,jamesmadisonuniversity,JAMES MADISON UNIVERSITY,Harrisonburg,VA
+1974,norfolkstateuniversity,NORFOLK STATE UNIVERSITY,Norfolk,VA
+1993,randolphcollege,RANDOLPH COLLEGE,Lynchburg,VA
+1958,regentuniversity,REGENT UNIVERSITY,Virginia Beach,VA
+1995,richardblandcollege,RICHARD BLAND COLLEGE,South Prince George,VA
+1952,stratforduniversity,STRATFORD UNIVERSITY,Fairfax,VA
+2001,sweetbriarcollege,SWEET BRIAR COLLEGE,Sweet Briar,VA
+1982,universitymarywashington,UNIVERSITY OF MARY WASHINGTON,Fredericksburg,VA
+1997,universityrichmond,UNIVERSITY OF RICHMOND,University of Richmond,VA
+2009,virginiamilitaryinstitute,VIRGINIA MILITARY INSTITUTE,Lexington,VA
 123,champlaincollege,CHAMPLAIN COLLEGE,Burlington,VT
 124,goddardcollege,GODDARD COLLEGE,Plainfield,VT
 125,greenmountaincollege,GREEN MOUNTAIN COLLEGE,Poultney,VT
@@ -673,36 +675,36 @@
 408,washingtonstateuniversityvancouver,WASHINGTON STATE UNIVERSITY - VANCOUVER,,WA
 394,whatcomcommunitycollege,WHATCOM COMMUNITY COLLEGE,Bellingham,WA
 397,yakimavalleycollege,YAKIMA VALLEY COLLEGE,Yakima,WA
-1697,beloitcollege,BELOIT COLLEGE,Beloit,WI
-1698,cardinalstritchuniversity,CARDINAL STRITCH UNIVERSITY,Milwaukee,WI
-1699,carrolluniversity,CARROLL UNIVERSITY,Waukesha,WI
-1713,chippewavalleytechnicalcollege,CHIPPEWA VALLEY TECHNICAL COLLEGE,Eau Claire,WI
-1685,concordiauniversitywisconsin,CONCORDIA UNIVERSITY-WISCONSIN,Mequon,WI
-1693,eastwesthealingartsinstitutemilwaukee,EAST-WEST HEALING ARTS INSTITUTE - MILWAUKEE,,WI
-1700,edgewoodcollege,EDGEWOOD COLLEGE,Madison,WI
-1731,herzinguniversitykenosha,HERZING UNIVERSITY-KENOSHA,Kenosha,WI
-1723,herzinguniversitymadison,HERZING UNIVERSITY-MADISON,Madison,WI
-1702,maranathabaptistuniversity,MARANATHA BAPTIST UNIVERSITY,Watertown,WI
-1706,moraineparktechnicalcollege,MORAINE PARK TECHNICAL COLLEGE,Fond du Lac,WI
-1710,riponcollege,RIPON COLLEGE,Ripon,WI
-1711,southwestwisconsintechnicalcollege,SOUTHWEST WISCONSIN TECHNICAL COLLEGE,,WI
-1732,universitywisconsincollegesbaraboosaukcounty,UNIVERSITY OF WISCONSIN COLLEGES - BARABOO/SAUK COUNTY,,WI
-1733,universitywisconsincollegesbarroncounty,UNIVERSITY OF WISCONSIN COLLEGES - BARRON COUNTY,,WI
-1734,universitywisconsincollegesfonddulac,UNIVERSITY OF WISCONSIN COLLEGES - FOND DU LAC,,WI
-1735,universitywisconsincollegesfoxvalley,UNIVERSITY OF WISCONSIN COLLEGES - FOX VALLEY,,WI
-1736,universitywisconsincollegesmanitowoc,UNIVERSITY OF WISCONSIN COLLEGES - MANITOWOC,,WI
-1737,universitywisconsincollegesmarathoncounty,UNIVERSITY OF WISCONSIN COLLEGES - MARATHON COUNTY,,WI
-1738,universitywisconsincollegesmarshfieldwoodcounty,UNIVERSITY OF WISCONSIN COLLEGES - MARSHFIELD/WOOD COUNTY,,WI
-1739,universitywisconsincollegesrockcounty,UNIVERSITY OF WISCONSIN COLLEGES - ROCK COUNTY,,WI
-1740,universitywisconsincollegessheboygan,UNIVERSITY OF WISCONSIN COLLEGES - SHEBOYGAN,,WI
-1741,universitywisconsincollegeswashingtoncounty,UNIVERSITY OF WISCONSIN COLLEGES - WASHINGTON COUNTY,,WI
-1742,universitywisconsincollegeswaukesha,UNIVERSITY OF WISCONSIN COLLEGES - WAUKESHA,,WI
-1714,waukeshacountytechnicalcollege,WAUKESHA COUNTY TECHNICAL COLLEGE,Pewaukee,WI
-1689,westerntechnicalcollege,WESTERN TECHNICAL COLLEGE,La Crosse,WI
-1743,wisconsinindianheadtechnicalcollegeashlandcampus,WISCONSIN INDIANHEAD TECHNICAL COLLEGE - ASHLAND CAMPUS,,WI
-1744,wisconsinindianheadtechnicalcollegenewrichmondcampus,WISCONSIN INDIANHEAD TECHNICAL COLLEGE - NEW RICHMOND CAMPUS,,WI
-1745,wisconsinindianheadtechnicalcollegericelakecampus,WISCONSIN INDIANHEAD TECHNICAL COLLEGE - RICE LAKE CAMPUS,,WI
-1746,wisconsinindianheadtechnicalcollegesuperiorcampus,WISCONSIN INDIANHEAD TECHNICAL COLLEGE - SUPERIOR CAMPUS,,WI
+1708,beloitcollege,BELOIT COLLEGE,Beloit,WI
+1709,cardinalstritchuniversity,CARDINAL STRITCH UNIVERSITY,Milwaukee,WI
+1710,carrolluniversity,CARROLL UNIVERSITY,Waukesha,WI
+1724,chippewavalleytechnicalcollege,CHIPPEWA VALLEY TECHNICAL COLLEGE,Eau Claire,WI
+1696,concordiauniversitywisconsin,CONCORDIA UNIVERSITY-WISCONSIN,Mequon,WI
+1704,eastwesthealingartsinstitutemilwaukee,EAST-WEST HEALING ARTS INSTITUTE - MILWAUKEE,,WI
+1711,edgewoodcollege,EDGEWOOD COLLEGE,Madison,WI
+1742,herzinguniversitykenosha,HERZING UNIVERSITY-KENOSHA,Kenosha,WI
+1734,herzinguniversitymadison,HERZING UNIVERSITY-MADISON,Madison,WI
+1713,maranathabaptistuniversity,MARANATHA BAPTIST UNIVERSITY,Watertown,WI
+1717,moraineparktechnicalcollege,MORAINE PARK TECHNICAL COLLEGE,Fond du Lac,WI
+1721,riponcollege,RIPON COLLEGE,Ripon,WI
+1722,southwestwisconsintechnicalcollege,SOUTHWEST WISCONSIN TECHNICAL COLLEGE,,WI
+1743,universitywisconsincollegesbaraboosaukcounty,UNIVERSITY OF WISCONSIN COLLEGES - BARABOO/SAUK COUNTY,,WI
+1744,universitywisconsincollegesbarroncounty,UNIVERSITY OF WISCONSIN COLLEGES - BARRON COUNTY,,WI
+1745,universitywisconsincollegesfonddulac,UNIVERSITY OF WISCONSIN COLLEGES - FOND DU LAC,,WI
+1746,universitywisconsincollegesfoxvalley,UNIVERSITY OF WISCONSIN COLLEGES - FOX VALLEY,,WI
+1747,universitywisconsincollegesmanitowoc,UNIVERSITY OF WISCONSIN COLLEGES - MANITOWOC,,WI
+1748,universitywisconsincollegesmarathoncounty,UNIVERSITY OF WISCONSIN COLLEGES - MARATHON COUNTY,,WI
+1749,universitywisconsincollegesmarshfieldwoodcounty,UNIVERSITY OF WISCONSIN COLLEGES - MARSHFIELD/WOOD COUNTY,,WI
+1750,universitywisconsincollegesrockcounty,UNIVERSITY OF WISCONSIN COLLEGES - ROCK COUNTY,,WI
+1751,universitywisconsincollegessheboygan,UNIVERSITY OF WISCONSIN COLLEGES - SHEBOYGAN,,WI
+1752,universitywisconsincollegeswashingtoncounty,UNIVERSITY OF WISCONSIN COLLEGES - WASHINGTON COUNTY,,WI
+1753,universitywisconsincollegeswaukesha,UNIVERSITY OF WISCONSIN COLLEGES - WAUKESHA,,WI
+1725,waukeshacountytechnicalcollege,WAUKESHA COUNTY TECHNICAL COLLEGE,Pewaukee,WI
+1700,westerntechnicalcollege,WESTERN TECHNICAL COLLEGE,La Crosse,WI
+1754,wisconsinindianheadtechnicalcollegeashlandcampus,WISCONSIN INDIANHEAD TECHNICAL COLLEGE - ASHLAND CAMPUS,,WI
+1755,wisconsinindianheadtechnicalcollegenewrichmondcampus,WISCONSIN INDIANHEAD TECHNICAL COLLEGE - NEW RICHMOND CAMPUS,,WI
+1756,wisconsinindianheadtechnicalcollegericelakecampus,WISCONSIN INDIANHEAD TECHNICAL COLLEGE - RICE LAKE CAMPUS,,WI
+1757,wisconsinindianheadtechnicalcollegesuperiorcampus,WISCONSIN INDIANHEAD TECHNICAL COLLEGE - SUPERIOR CAMPUS,,WI
 1355,bluefieldstatecollege,BLUEFIELD STATE COLLEGE,Bluefield,WV
 1350,bridgevalleycommunitytechnicalcollege,BRIDGEVALLEY COMMUNITY &amp; TECHNICAL COLLEGE,South  Charleston,WV
 1359,fairmontstateuniversity,FAIRMONT STATE UNIVERSITY,Fairmont,WV
