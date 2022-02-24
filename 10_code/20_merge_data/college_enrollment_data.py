@@ -25,11 +25,13 @@ In the enrollment_data, there are multiple rows for each college and hence when 
 the total enrollment is correct. Verified with manually searching total student population of colleges on college websites and the values present in the column EFAGE09.
 
 '''
+print("Unique Colleges in Enrollment Data:",len(enrollment_data['UNITID'].unique()))
+print("College Name Size:",len(college_name))
 enrollment_data=enrollment_data[enrollment_data['LINE']==412]
 
-
+print("Enrollment Data Size:",len(enrollment_data))
 #Merged the Data on the UNITID Column
 data=college_name.merge(enrollment_data, on='UNITID')
-
+print("After Merge Data: ", len(data))
 #Saving it into the 20_intermediate_files folder
 _=data.to_csv("../../20_intermediate_files/college_enrollment_data_merge.csv")
