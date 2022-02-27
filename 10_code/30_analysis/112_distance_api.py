@@ -71,8 +71,8 @@ def main_distance(org_y,org_x,dest_y,dest_x,data,i):
             #    col3='fare_in_dollars'
             #    data.loc[i,col3]=fare
 
-            col1='2020_distance_by_'+mode+' (miles)'
-            col2='2020_duration_by_'+mode+' (minutes)'
+            col1='2018_distance_by_'+mode+' (miles)'
+            col2='2018_duration_by_'+mode+' (minutes)'
             #print("Distance: ",distance)
             #print("Duration: ", duration)
             data.loc[i,col1]=distance
@@ -82,23 +82,41 @@ def main_distance(org_y,org_x,dest_y,dest_x,data,i):
 
 def load_data():
     #input the data
-    input_filename = "30_campuses_w_dist_to_nearest_pp"
+
+    # input_filename = "30_campuses_w_dist_to_nearest_pp"
+
+    input_filename = "31_campuses_w_dist_to_nearest_dropoff"
     print(input_filename)
-    data=gpd.read_file("../../20_intermediate_files/"+input_filename+".geojson")
+
+    #data=gpd.read_file("../../20_intermediate_files/"+input_filename+".geojson")
+    data=pd.read_csv("../../20_intermediate_files/"+input_filename+".csv")
 
     #data = data[data['Longitude_left'].notna()]
+
+
     data=data.drop_duplicates(subset=['School Name'])
+    
+    
     for i,r in data.iterrows():
         #extracting the polling location and passing the lat long for college and polling into main_distance
         #polling_location=list(data.loc[i,'nearest_polling_geometry'][7:-1].split())
     
-        x_pol,y_pol=data.loc[i,'Longitude_2020_early'],data.loc[i,'Latitude_2020_early']
+        #x_pol,y_pol=data.loc[i,'Longitude_2020_early'],data.loc[i,'Latitude_2020_early']
+        
+        x_pol,y_pol=data.loc[i,'Longitude_Dropoff_2018'],data.loc[i,'Latitude_Dropoff_2018']
+        
         x_col,y_col=data.loc[i,'centroid_long'],data.loc[i,'centroid_lat']
+        if not pd.isnull(x_pol) or pd.isnull(y_pol):
 
-        main_distance(str(y_col),str(x_col),str(y_pol),str(x_pol),data,i)
+            main_distance(str(y_col),str(x_col),str(y_pol),str(x_pol),data,i)
+        else:
+            continue
 
-    _=data.to_file("../../20_intermediate_files/"+input_filename+".geojson", driver="GeoJSON")
+    #_=data.to_file("../../20_intermediate_files/"+input_filename+".geojson", driver="GeoJSON")
     
+    _=data.to_csv("../../20_intermediate_files/"+input_filename+".csv")
+    
+
     #geo_df.to_file(
     #"../../20_intermediate_files/10_HIFLD_campus_polygons.geojson", driver="GeoJSON")
 
