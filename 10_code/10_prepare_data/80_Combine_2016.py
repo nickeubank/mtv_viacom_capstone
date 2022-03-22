@@ -1,6 +1,19 @@
 import pandas as pd
 import glob
 
+def isLA(output):
+    for i,r in output.iterrows():
+        if output.loc[i,'state']=='LA':
+            print(output.loc[i,'address'][-2:])
+            if output.loc[i,'address'][-2:]!='LA':
+                
+                output.loc[i,'address']=output.loc[i,'address']+", LA"
+
+    return output
+                
+
+
+
 def isMA(output):
     
     '''
@@ -28,6 +41,15 @@ def isMA(output):
                 if address[-2:]!='MA':
                     address=address+' MA'
                 output.loc[i,'address']=address
+            
+            if "enter" in output.loc[i,'address'].lower():
+                start_pos=output.loc[i,'address'].lower().find("enter")
+                end_pos=output.loc[i,'address'].rfind(".")
+                address=output.loc[i,'address']
+           
+                address=output.loc[i,'address'][:start_pos]+" "+output.loc[i,'address'][end_pos+2:]
+                
+                address=address.replace(".",",")
        
       
             if "-" in output.loc[i,'address'].lower():
@@ -37,6 +59,10 @@ def isMA(output):
                 address=address[end_pos+1:]
          
                 output.loc[i,'address']=address
+
+            if output.loc[i,'address'][-2:]!='MA':
+                output.loc[i,'address']=output.loc[i,'address']+", MA"
+
     return output
      
   
@@ -64,6 +90,7 @@ import numpy as np
 def isMS(output):
     '''
     Put a comma before MS
+    remove text before the - and Number
     '''
     for i,r in output.iterrows():
         if not pd.isnull(output.loc[i,'state']):
@@ -73,6 +100,10 @@ def isMS(output):
                 if address[state_pos-1]==" ":
                     address=address[:state_pos-1]+", "+address[state_pos:]
                     output.loc[i,'address']=address
+
+                if '-' in output.loc[i,'address']:
+                    s_pos=output.loc[i,'address'].find("-")
+                    output.loc[i,'address']=output.loc[i,'address'][s_pos+1:]
     return output
 
 
@@ -89,6 +120,7 @@ def isNH(output):
             if 'NH' in output.loc[i,'state']:
                 address=output.loc[i,'address']
                 if isinstance(address[0],str):
+                 
                     m = re.search(r"\d", address)
                     address=address[m.start():]
             
@@ -102,6 +134,28 @@ def isNH(output):
 
     return output
 
+def isKY(output):
+    for i,r in output.iterrows():
+        try:
+            if 'KY' in output.loc[i,'state']:
+                if 'KY' in output.loc[i,'address']:
+                    address= output.loc[i,'address']
+                    s_pos=address.find(" KY ")
+                    address=address[:s_pos]+","+address[s_pos:]
+                    
+                    l_pos=address.rfind(',')
+                    a=address[:l_pos]
+                    s_pos=a.rfind(" ")
+                    a=a[:s_pos]+","+a[s_pos:]
+                    address=a+address[l_pos:]
+                    #print(address)
+                    output.loc[i,'address']=address
+
+
+
+        except:
+            continue
+    return output
 
     
 
@@ -140,14 +194,32 @@ Else
         then append state to the string
     else
 
-    
-
 '''
 #checking if there is a comma between State and ZipCode and remove it
+#remove all content inside parathesis
 a = set()
 for i,r in output.iterrows():
 
     address=output.loc[i,'address']
+
+    #Remove content inside paranthesis
+    if '(' in address:
+        s_pos=address.find('(')
+        e_pos=address.find(')')
+        address=address[:s_pos]+address[e_pos+1:]
+    
+
+    try:
+        if isinstance(address[0],str):
+            if re.search(r"\d", address).start()!=0:
+        
+                m = re.search(r"\d", address)
+                address=address[m.start():]
+           
+    except:
+        continue
+
+
     if address[-2:-1].isnumeric():
         
         if address[-7:-6]==',':
@@ -171,10 +243,29 @@ output=isMA(output)
 output=isME(output)
 output=isMS(output)
 output=isNH(output)
+output=isKY(output)
+output=isLA(output)
+
+    
+    
+
+#return a
+
+#MA has extra text
+    #Remove the words from Vote till a period.
+#ME has extra space between ,
+#MS add , before the state
+#NH add , before the state and also before the city (word before the state)
+
+
+#------
+# KY needs to add , before city and state
+# LA add states to all
+
 
 output=output['address']
 
-_=output.to_csv("../../00_source_data/Polling Data By Year 2016/2016_final_geocoded.csv")
+_=output.to_csv("../../00_source_data/2016_polling_data_cpi/2016_final_geocoded.csv")
 
 
 #return a
