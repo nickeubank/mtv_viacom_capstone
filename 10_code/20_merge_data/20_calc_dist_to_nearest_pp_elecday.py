@@ -71,9 +71,16 @@ s = gpd.read_file(
     )
 state_set_16 = set(s['State'].unique())
 
+#Load 2018
+t = gpd.read_file(
+        f"../../20_intermediate_files/10_polling_places/2018_Polling_Clean/cleaned_2018_polling_place.csv"
+    )
+state_set_18 = set(t['State'].unique())
+
 max_state_set = ev_state_set.union(ed_state_set)
 max_state_set = max_state_set.union(state_set_12)
 max_state_set = max_state_set.union(state_set_16)
+max_state_set = max_state_set.union(state_set_18)
     
 #Limit campuses to those within our common states
 campuses = campuses[campuses['STATE'].isin(max_state_set)]
@@ -169,6 +176,28 @@ temp = pd.DataFrame()
 for state in max_state_set:
     temp1 = pd.DataFrame()
     temp1 = campuses[campuses['STATE'] == state].sjoin_nearest(s[s[f"state_{year}"] == state], distance_col=f"distances_{year}", how="left")
+    #Remove multiple equidistant polling places
+    temp1 = temp1.drop_duplicates(subset=['UNIQUEID'], keep='last')
+    temp = pd.concat([temp, temp1])
+final_df = final_df.merge(temp.iloc[:,[0,-3,-2,-1]],on='UNIQUEID',how='inner')
+
+######################
+#Add 2018 Election Day
+######################
+t = gpd.GeoDataFrame(t,geometry=gpd.points_from_xy(t['Longitude'], t['Latitude']))
+t = t.set_crs(epsg=4326)
+t = t.to_crs(wkt)
+#Save a copy of polling place geometries
+t = t[["State", "Latitude", "Longitude", "geometry"]]
+year = '2018'
+t = t.rename({"State": f"state_{year}"}, axis="columns")
+t = t.rename({"Latitude": f"Latitude_{year}"}, axis="columns")
+t = t.rename({"Longitude": f"Longitude_{year}"}, axis="columns")
+temp = pd.DataFrame()
+#Loop through states and merge with final dataframe
+for state in max_state_set:
+    temp1 = pd.DataFrame()
+    temp1 = campuses[campuses['STATE'] == state].sjoin_nearest(t[t[f"state_{year}"] == state], distance_col=f"distances_{year}", how="left")
     #Remove multiple equidistant polling places
     temp1 = temp1.drop_duplicates(subset=['UNIQUEID'], keep='last')
     temp = pd.concat([temp, temp1])
