@@ -67,7 +67,7 @@ state_set_12 = set(r['State'].unique())
 
 #Load 2016
 s = gpd.read_file(
-        f"../../00_source_data/Polling Data by Year 2016/2016_final_geocoded_geocodio_adf648fe856fa49c854716261704e4cfbe47e6cc.csv"
+        f"../../00_source_data/2016_polling_data_cpi/2016_final_geocoded_geocodio_2.csv"
     )
 state_set_16 = set(s['State'].unique())
 
