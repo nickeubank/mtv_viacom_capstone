@@ -83,9 +83,9 @@ def main_distance(org_y,org_x,dest_y,dest_x,data,i):
 def load_data():
     #input the data
 
-    # input_filename = "30_campuses_w_dist_to_nearest_pp"
+    input_filename = "30_campuses_w_dist_to_nearest_pp"
 
-    input_filename = "31_campuses_w_dist_to_nearest_dropoff"
+    #input_filename = "31_campuses_w_dist_to_nearest_dropoff"
     print(input_filename)
 
     #data=gpd.read_file("../../20_intermediate_files/"+input_filename+".geojson")
@@ -103,7 +103,7 @@ def load_data():
     
         #x_pol,y_pol=data.loc[i,'Longitude_2020_early'],data.loc[i,'Latitude_2020_early']
         
-        x_pol,y_pol=data.loc[i,'Longitude_Dropoff_2018'],data.loc[i,'Latitude_Dropoff_2018']
+        x_pol,y_pol=data.loc[i,'Longitude_2018'],data.loc[i,'Latitude_2018']
         
         x_col,y_col=data.loc[i,'centroid_long'],data.loc[i,'centroid_lat']
         if not pd.isnull(x_pol) or pd.isnull(y_pol):
