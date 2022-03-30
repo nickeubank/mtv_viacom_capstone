@@ -71,8 +71,8 @@ def main_distance(org_y,org_x,dest_y,dest_x,data,i):
             #    col3='fare_in_dollars'
             #    data.loc[i,col3]=fare
 
-            col1='2018_distance_by_'+mode+' (miles)'
-            col2='2018_duration_by_'+mode+' (minutes)'
+            col1='2020_distance_by_'+mode+' (miles)'
+            col2='2020_duration_by_'+mode+' (minutes)'
             #print("Distance: ",distance)
             #print("Duration: ", duration)
             data.loc[i,col1]=distance
@@ -103,7 +103,7 @@ def load_data():
     
         #x_pol,y_pol=data.loc[i,'Longitude_2020_early'],data.loc[i,'Latitude_2020_early']
         
-        x_pol,y_pol=data.loc[i,'Longitude_2018'],data.loc[i,'Latitude_2018']
+        x_pol,y_pol=data.loc[i,'Longitude_2020'],data.loc[i,'Latitude_2020']
         
         x_col,y_col=data.loc[i,'centroid_long'],data.loc[i,'centroid_lat']
         if not pd.isnull(x_pol) or pd.isnull(y_pol):
