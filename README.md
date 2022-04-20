@@ -3,7 +3,7 @@
 ## Introduction
 This github repository contains all of the data, code, and analysis from our capstone project in partnership with MTV. In this study we looked at voting access on college campuses in 2012, 2016, 2018, and 2020. We used distance from the college campus to the nearest polling place as a proxy for access. The source data and code files can be used to recreate our intermediate files and consequently run our analysis files. All code files should be run in numerical order within a folder. Our final presentation slides and report can be found in the 40_docs folder.
 
-<img align='center' width="614" alt="Screen Shot 2022-04-20 at 5 32 20 PM" src="https://user-images.githubusercontent.com/30974949/164326523-3e959034-ce9a-4d36-b5e2-17e7fe02a667.png">
+<img align="center" width="614" alt="Screen Shot 2022-04-20 at 5 32 20 PM" src="https://user-images.githubusercontent.com/30974949/164326523-3e959034-ce9a-4d36-b5e2-17e7fe02a667.png">
 
 
 ## Long-Term Planning
