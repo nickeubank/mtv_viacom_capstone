@@ -12,7 +12,7 @@ Our short term task management is shown via the Github Issues tab of this reposi
 ## File Table of Contents
 #### 10_code
 ##### 10_prepare_data
-1.  File Name: 10_import_HIFLD_College_Polygons.py  <br>
+   File Name: 10_import_HIFLD_College_Polygons.py  <br>
    Description: Loading and Cleaning HIFLD data. <br>
    Input: 00_source_data/HIFLD_CollegeUniversityCampuses/HIFLD_CollegeUniversityCampuses.shp <br>
    Output: /20_intermediate_files/10_HIFLD_campus_polygons.csv <br>
