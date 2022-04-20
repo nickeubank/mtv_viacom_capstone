@@ -1,5 +1,8 @@
 # mtv_viacom_capstone
 
+## Introduction
+This github repository contains all of the data, code, and analysis from our capstone project in partnership with MTV. In this study we looked at voting access on college campuses in 2012, 2016, 2018, and 2020. We used distance from the college campus to the nearest polling place as a proxy for access. The source data and code files can be used to recreate our intermediate files and consequently run our analysis files. All code files should be run in numerical order within a folder. Our final presentation slides and report can be found in the 40_docs folder.
+
 ## Long-Term Planning
 Our long-term planning can be found in this Gantt Chart: https://docs.google.com/spreadsheets/d/1HWH5hh6ox8acLfQ1_6jpGFs9mc5kYe1hEaEqWNq4oJg/edit?usp=sharing
 
