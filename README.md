@@ -34,9 +34,8 @@ Our short term task management is shown via the Github Issues tab of this reposi
 
    File Name: 112_distance_api.py <br>
    Description: Calculates the Driving, Walking, Transit time and duration from the college and its nearest polling location through the Google Maps API <br>
-   Input: Have to add in the command line (argument) the nearest college polling data from /20_intermediate_files/. For example: 
-   ```python 112_distance_api.py subset_college_nearest_poll_2016``` <br>
-   Output: /20_intermediate_files/subset_college_nearest_poll_2016_distanceAPI.csv <br>
+   Input: 30_campuses_w_dist_to_nearest_pp.geojson<br>
+   Output: /20_intermediate_files/30_campuses_w_dist_to_nearest_pp.geojson <br>
 <br>
 
    File Name: 120_regions.py <br>
@@ -50,7 +49,7 @@ Our short term task management is shown via the Github Issues tab of this reposi
 
 <br>
 
-
+-----------------------------------------------------------------------
    File Name: 102_2020Merge.py <br>
    Description: Merges the CPI and Safegraph polling data using a buffer. <br>
    Input: 00_source_data/2020 Polling Data/polling_pk_master_post.csv and 00_source_data/2020_Polling_ByState <br>
